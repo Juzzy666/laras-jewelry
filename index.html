@@ -454,6 +454,161 @@
             }
             .gallery-item:hover .gallery-cta { opacity: 1; transform: translateY(0); }
 
+            /* ===== SHOP COLLECTION ===== */
+            .shop { padding: 120px 0; background: var(--cream); }
+            .shop-header { text-align: center; margin-bottom: 64px; }
+            .shop-header .section-subtitle { margin: 0 auto; }
+            .shop-tabs {
+                display: flex;
+                justify-content: center;
+                gap: 16px;
+                margin-bottom: 56px;
+                flex-wrap: wrap;
+            }
+            .shop-tab {
+                padding: 12px 32px;
+                border: 1px solid rgba(0,0,0,0.15);
+                background: var(--white);
+                font-size: 13px;
+                font-weight: 500;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                color: var(--dark-gray);
+                cursor: pointer;
+                transition: var(--transition);
+                position: relative;
+            }
+            .shop-tab:hover { border-color: var(--gold); color: var(--gold); }
+            .shop-tab.active {
+                background: var(--gold);
+                color: var(--white);
+                border-color: var(--gold);
+            }
+            .shop-tab.active::after {
+                content: '';
+                position: absolute;
+                bottom: -8px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 8px;
+                height: 8px;
+                background: var(--gold);
+                border-radius: 50%;
+            }
+            .shop-content { display: none; }
+            .shop-content.active { display: block; }
+            .product-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 28px;
+                margin-bottom: 48px;
+            }
+            .product-card {
+                background: var(--white);
+                overflow: hidden;
+                transition: var(--transition);
+            }
+            .product-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.08); }
+            .product-image {
+                width: 100%;
+                aspect-ratio: 1/1;
+                object-fit: cover;
+                background: var(--light-gray);
+                overflow: hidden;
+            }
+            .product-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+            }
+            .product-card:hover .product-image img { transform: scale(1.05); }
+            .product-info {
+                padding: 24px 20px;
+            }
+            .product-name {
+                font-family: var(--serif);
+                font-size: 16px;
+                font-weight: 400;
+                color: var(--charcoal);
+                line-height: 1.4;
+                margin-bottom: 12px;
+                min-height: 48px;
+            }
+            .product-prices {
+                display: flex;
+                gap: 12px;
+                align-items: center;
+                margin-bottom: 14px;
+            }
+            .product-price-original {
+                font-size: 13px;
+                color: var(--medium-gray);
+                text-decoration: line-through;
+            }
+            .product-price-sale {
+                font-family: var(--serif);
+                font-size: 20px;
+                font-weight: 500;
+                color: var(--gold);
+            }
+            .product-specs {
+                display: flex;
+                gap: 8px;
+                flex-wrap: wrap;
+            }
+            .spec-badge {
+                font-size: 11px;
+                font-weight: 500;
+                letter-spacing: 0.5px;
+                padding: 6px 10px;
+                background: rgba(197,162,88,0.08);
+                color: var(--gold-dark);
+                text-transform: capitalize;
+                border-radius: 3px;
+            }
+            .shop-cta {
+                text-align: center;
+                padding: 40px 0 0;
+            }
+            .shop-cta .btn-primary { background: var(--charcoal); }
+            .shop-cta .btn-primary:hover { background: var(--black); }
+            .product-card.filter-hidden { display: none; }
+            .shop-no-results {
+                text-align: center;
+                padding: 60px 20px;
+                font-family: var(--sans);
+                color: var(--medium-gray);
+                font-size: 16px;
+                line-height: 1.7;
+            }
+            .shop-no-results .filter-cut-name {
+                color: var(--gold);
+                font-weight: 600;
+                text-transform: capitalize;
+            }
+            .shop-filter-reset {
+                text-align: center;
+                padding: 16px 0 0;
+            }
+            .btn-reset-filter {
+                font-family: var(--sans);
+                font-size: 12px;
+                font-weight: 500;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                color: var(--gold);
+                background: none;
+                border: 1px solid var(--gold);
+                padding: 12px 32px;
+                cursor: pointer;
+                transition: var(--transition);
+            }
+            .btn-reset-filter:hover {
+                background: var(--gold);
+                color: var(--white);
+            }
+
             /* ===== CUSTOM DESIGN ===== */
             .custom-design { padding: 120px 0; background: var(--black); color: var(--white); position: relative; overflow: hidden; }
             .custom-design::before {
@@ -721,6 +876,11 @@
                 .gallery-item.tall { grid-row: span 1; }
                 .gallery-item img { height: 220px !important; }
                 .gallery-cta { opacity: 1; transform: translateY(0); font-size: 10px; padding: 8px 16px; }
+                .shop { padding: 80px 0; }
+                .product-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+                .product-name { font-size: 14px; min-height: 40px; }
+                .shop-tabs { gap: 12px; }
+                .shop-tab { padding: 10px 20px; font-size: 12px; }
                 .custom-design { padding: 80px 0; }
                 .custom-design-grid { grid-template-columns: 1fr; gap: 40px; }
                 .custom-images img { height: 180px; }
@@ -747,6 +907,8 @@
                 .gallery-item img { height: 200px !important; }
                 .gallery-item.tall img { height: 280px !important; }
                 .cuts-grid { grid-template-columns: repeat(3, 1fr); }
+                .product-grid { grid-template-columns: 1fr; gap: 16px; }
+                .shop-tab { padding: 10px 16px; font-size: 11px; }
                 .footer-grid { grid-template-columns: 1fr; }
                 .hero-actions { flex-direction: column; }
                 .hero-actions a { text-align: center; }
@@ -775,7 +937,8 @@
                 <img src="https://larasjewelry.com/wp-content/uploads/2021/02/Lara-Logo-1024x154.png" alt="Lara's Jewelry" class="logo-img">
             </a>
             <nav class="nav" id="nav">
-                <a href="#collections">Collections</a>
+                <a href="#shop">Collections</a>
+                <a href="#shop">Shop</a>
                 <a href="#custom">Custom Design</a>
                 <a href="#story">Our Story</a>
                 <a href="#reviews">Reviews</a>
@@ -798,7 +961,7 @@
                 <h1 class="hero-title">Crafted by Hand.<br><em>Treasured Forever.</em></h1>
                 <p class="hero-desc">Two generations of master jewelers. GIA certified diamonds, custom designs, and heirloom-quality pieces handcrafted in our Los Angeles showroom.</p>
                 <div class="hero-actions">
-                    <a href="#collections" class="btn-primary">Explore Collections</a>
+                    <a href="#shop" class="btn-primary">Explore Collections</a>
                     <a href="tel:+12136230919" class="btn-outline">Call (213) 623-0919</a>
                 </div>
             </div>
@@ -829,36 +992,331 @@
         </div>
     </div>
 
-    <!-- Collections -->
-    <section class="collections" id="collections">
+    <!-- Shop Our Collection -->
+    <section class="shop" id="shop">
         <div class="container">
-            <div class="collections-header fade-in">
-                <div class="section-label">Our Collections</div>
-                <h2 class="section-title">Find Your Forever Piece</h2>
-                <p class="section-subtitle">Every piece is hand-crafted in our Los Angeles shop with the care and precision that has defined Lara's for over four decades.</p>
+            <div class="shop-header fade-in">
+                <div class="section-label">Curated Selection</div>
+                <h2 class="section-title">Shop Our Collection</h2>
+                <p class="section-subtitle">Hand-selected pieces from our inventory, each certified and ready to make a statement.</p>
             </div>
-            <div class="collections-grid">
-                <a href="https://larasjewelry.com/product-category/engagement-rings/" class="collection-card fade-in fade-in-delay-1">
-                    <img src="https://larasjewelry.com/wp-content/uploads/2021/02/Engagement-705x1024.jpg" alt="Engagement Rings at Lara's Jewelry" loading="lazy">
-                    <div class="collection-overlay">
-                        <span>Shop Now</span>
-                        <h3>Engagement Rings</h3>
+
+            <div class="shop-tabs fade-in">
+                <button class="shop-tab active" data-category="engagement">Engagement Rings</button>
+                <button class="shop-tab" data-category="bands">Wedding Bands</button>
+                <button class="shop-tab" data-category="fine">Fine Jewelry</button>
+            </div>
+
+            <!-- Engagement Rings -->
+            <div class="shop-content active" data-category="engagement">
+                <div class="product-grid">
+                    <div class="product-card fade-in" data-cut="brilliant">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/02/Earring-2-768x768.jpg" alt="2.62 ct. Round Brilliant Cut Diamond Stud Earrings" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">2.62 ct. Round Brilliant Cut Diamond Stud Earrings</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$26,500</span>
+                                <span class="product-price-sale">$18,550</span>
+                            </div>
+                            <div class="product-specs">
+                                <span class="spec-badge">Brilliant</span>
+                            </div>
+                        </div>
                     </div>
-                </a>
-                <a href="https://larasjewelry.com/product-category/wedding-bands/" class="collection-card fade-in fade-in-delay-2">
-                    <img src="https://larasjewelry.com/wp-content/uploads/2021/02/Bands-705x1024.jpg" alt="Wedding Bands at Lara's Jewelry" loading="lazy">
-                    <div class="collection-overlay">
-                        <span>Shop Now</span>
-                        <h3>Wedding Bands</h3>
+                    <div class="product-card fade-in fade-in-delay-1" data-cut="princess">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/09/46_a-1-768x768.jpg" alt="EGL 0.71 ct. Princess Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">EGL 0.71 ct. Princess Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$5,200</span>
+                                <span class="product-price-sale">$4,400</span>
+                            </div>
+                            <div class="product-specs">
+                                <span class="spec-badge">Princess</span>
+                                <span class="spec-badge">F Color</span>
+                                <span class="spec-badge">SI2</span>
+                            </div>
+                        </div>
                     </div>
-                </a>
-                <a href="https://larasjewelry.com/product-category/fine-jewelry/" class="collection-card fade-in fade-in-delay-3">
-                    <img src="https://larasjewelry.com/wp-content/uploads/2021/02/Fine-705x1024.jpg" alt="Fine Jewelry at Lara's Jewelry" loading="lazy">
-                    <div class="collection-overlay">
-                        <span>Shop Now</span>
-                        <h3>Fine Jewelry</h3>
+                    <div class="product-card fade-in fade-in-delay-2" data-cut="asscher">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/09/61_a-768x768.jpg" alt="EGL 1.01 ct. Asscher Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">EGL 1.01 ct. Asscher Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$8,600</span>
+                                <span class="product-price-sale">$5,500</span>
+                            </div>
+                            <div class="product-specs">
+                                <span class="spec-badge">Asscher</span>
+                                <span class="spec-badge">G Color</span>
+                                <span class="spec-badge">VS2</span>
+                            </div>
+                        </div>
                     </div>
-                </a>
+                    <div class="product-card fade-in fade-in-delay-3" data-cut="oval">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/10/85-768x768.jpg" alt="EGL 1.03 ct. Oval Cut Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">EGL 1.03 ct. Oval Cut Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$8,950</span>
+                                <span class="product-price-sale">$6,975</span>
+                            </div>
+                            <div class="product-specs">
+                                <span class="spec-badge">Oval</span>
+                                <span class="spec-badge">G Color</span>
+                                <span class="spec-badge">VS1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-1" data-cut="brilliant">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/10/86-768x768.jpg" alt="EGL 1.52 ct. Round Brilliant Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">EGL 1.52 ct. Round Brilliant Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$21,350</span>
+                                <span class="product-price-sale">$9,315</span>
+                            </div>
+                            <div class="product-specs">
+                                <span class="spec-badge">Brilliant</span>
+                                <span class="spec-badge">H Color</span>
+                                <span class="spec-badge">VS1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-2" data-cut="emerald">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/09/56_a-768x768.jpg" alt="GIA 0.75 ct. Emerald Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 0.75 ct. Emerald Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$6,560</span>
+                                <span class="product-price-sale">$4,400</span>
+                            </div>
+                            <div class="product-specs">
+                                <span class="spec-badge">Emerald</span>
+                                <span class="spec-badge">F Color</span>
+                                <span class="spec-badge">VVS1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-3" data-cut="emerald">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/09/51_a-768x768.jpg" alt="GIA 1.00 ct. Emerald Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.00 ct. Emerald Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$9,600</span>
+                                <span class="product-price-sale">$7,300</span>
+                            </div>
+                            <div class="product-specs">
+                                <span class="spec-badge">Emerald</span>
+                                <span class="spec-badge">D Color</span>
+                                <span class="spec-badge">VS2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop-no-results" style="display:none;">
+                    <p>We carry a wide selection of <span class="filter-cut-name"></span> cut diamonds in store.</p>
+                    <a href="tel:+12136230919" class="btn-primary" style="margin-top:20px;">Call to Browse — (213) 623-0919</a>
+                </div>
+                <div class="shop-filter-reset" style="display:none;">
+                    <button class="btn-reset-filter">Show All Engagement Rings</button>
+                </div>
+                <div class="shop-cta fade-in">
+                    <a href="tel:+12136230919" class="btn-primary">Call for Full Catalog — (213) 623-0919</a>
+                </div>
+            </div>
+
+            <!-- Wedding Bands -->
+            <div class="shop-content" data-category="bands">
+                <div class="product-grid">
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/03/Band-32-768x768.jpg" alt="2.00 ct. Round Brilliant Cut Diamond Band" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">2.00 ct. Round Brilliant Cut Diamond Band</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$8,500</span>
+                                <span class="product-price-sale">$6,500</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-1">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/08/Band-35-768x768.jpg" alt="2.34 ct. Oval Cut Diamond Eternity Band" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">2.34 ct. Oval Cut Diamond Eternity Band</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$4,135</span>
+                                <span class="product-price-sale">$3,700</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-2">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/03/Band-33-768x768.jpg" alt="2.54 ct. Princess Cut Diamond Band" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">2.54 ct. Princess Cut Diamond Band</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$11,030</span>
+                                <span class="product-price-sale">$8,300</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-3">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/03/Band-34-768x768.jpg" alt="2.85 ct. Emerald Cut Diamond Band" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">2.85 ct. Emerald Cut Diamond Band</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$10,800</span>
+                                <span class="product-price-sale">$7,900</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-1">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/02/Band-29-768x768.jpg" alt="3.05 ct. Round Brilliant Cut Diamond Eternity Band" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">3.05 ct. Round Brilliant Cut Diamond Eternity Band</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$5,475</span>
+                                <span class="product-price-sale">$4,650</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-2">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/02/Band-31-768x768.jpg" alt="5.14 ct. Round Brilliant Cut Diamond Eternity Band" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">5.14 ct. Round Brilliant Cut Diamond Eternity Band</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$20,220</span>
+                                <span class="product-price-sale">$14,150</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-3">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/08/Band-35-768x768.jpg" alt="9.01 ct. Emerald Cut Diamond Eternity Band" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">9.01 ct. Emerald Cut Diamond Eternity Band</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$41,500</span>
+                                <span class="product-price-sale">$27,000</span>
+                            </div>
+                            <div class="product-specs">
+                                <span class="spec-badge">Emerald</span>
+                                <span class="spec-badge">E Color</span>
+                                <span class="spec-badge">VS1</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop-cta fade-in">
+                    <a href="tel:+12136230919" class="btn-primary">Call for Full Catalog — (213) 623-0919</a>
+                </div>
+            </div>
+
+            <!-- Fine Jewelry -->
+            <div class="shop-content" data-category="fine">
+                <div class="product-grid">
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/03/Earring-2-1-768x768.jpg" alt="0.70 ct. Round Brilliant Cut Diamond Stud Earrings" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">0.70 ct. Round Brilliant Cut Diamond Stud Earrings</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$2,450</span>
+                                <span class="product-price-sale">$1,960</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-1">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/02/Earring-2-768x768.jpg" alt="0.74 ct. Round Brilliant Cut Diamond Stud Earrings" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">0.74 ct. Round Brilliant Cut Diamond Stud Earrings</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$2,170</span>
+                                <span class="product-price-sale">$1,950</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-2">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/11/Earring-5-1-768x768.jpg" alt="0.81 ct. Princess Cut Diamond Stud Earrings" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">0.81 ct. Princess Cut Diamond Stud Earrings</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$1,490</span>
+                                <span class="product-price-sale">$1,350</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-3">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/02/Earring-2-768x768.jpg" alt="1.00 ct. Round Brilliant Cut Diamond Stud Earrings" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">1.00 ct. Round Brilliant Cut Diamond Stud Earrings</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$4,015</span>
+                                <span class="product-price-sale">$3,400</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-1">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/02/Earring-2-768x768.jpg" alt="1.40 ct. Round Brilliant Cut Diamond Stud Earrings" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">1.40 ct. Round Brilliant Cut Diamond Stud Earrings</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$6,160</span>
+                                <span class="product-price-sale">$4,900</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-2">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/11/Earring-5-1-768x768.jpg" alt="1.18 ct. Round Halo Diamond Stud Earrings" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">1.18 ct. Round Halo Diamond Stud Earrings</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$3,180</span>
+                                <span class="product-price-sale">$2,790</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop-cta fade-in">
+                    <a href="tel:+12136230919" class="btn-primary">Call for Full Catalog — (213) 623-0919</a>
+                </div>
             </div>
         </div>
     </section>
@@ -893,9 +1351,9 @@
                 <p class="section-subtitle">Every piece is made by hand in our LA workshop. Browse our collections to find yours.</p>
             </div>
             <div class="gallery-grid">
-                <a href="https://larasjewelry.com/product-category/engagement-rings/" class="gallery-item tall fade-in" target="_blank" rel="noopener">
+                <a href="https://www.yelp.com/biz/laras-jewelry-los-angeles" target="_blank" rel="noopener" class="gallery-item tall fade-in">
                     <img src="https://larasjewelry.com/wp-content/uploads/2021/02/Engagement-705x1024.jpg" alt="Engagement rings by Lara's Jewelry" loading="lazy">
-                    <div class="gallery-overlay"><span class="gallery-cta">Engagement Rings</span></div>
+                    <div class="gallery-overlay"><span class="gallery-cta">View on Yelp</span></div>
                 </a>
                 <a href="https://www.yelp.com/biz/laras-jewelry-los-angeles" class="gallery-item fade-in" target="_blank" rel="noopener">
                     <img src="https://s3-media0.fl.yelpcdn.com/bphoto/LlJ0a8LZTwC_PKec7TwJ0Q/o.jpg" alt="Jewelry by Lara's" loading="lazy" style="height: 280px;">
@@ -909,9 +1367,9 @@
                     <img src="https://s3-media0.fl.yelpcdn.com/bphoto/cHixp7YEVeHadKYkqBVMpg/o.jpg" alt="Diamond ring by Lara's Jewelry" loading="lazy" style="height: 280px;">
                     <div class="gallery-overlay"><span class="gallery-cta">View on Yelp</span></div>
                 </a>
-                <a href="https://larasjewelry.com/product-category/wedding-bands/" class="gallery-item fade-in" target="_blank" rel="noopener">
+                <a href="https://www.yelp.com/biz/laras-jewelry-los-angeles" target="_blank" rel="noopener" class="gallery-item fade-in">
                     <img src="https://larasjewelry.com/wp-content/uploads/2021/02/Claude.jpg" alt="Women's wedding bands by Lara's Jewelry" loading="lazy" style="height: 280px;">
-                    <div class="gallery-overlay"><span class="gallery-cta">Wedding Bands</span></div>
+                    <div class="gallery-overlay"><span class="gallery-cta">View on Yelp</span></div>
                 </a>
             </div>
             <div style="text-align: center; margin-top: 48px;" class="fade-in">
@@ -971,31 +1429,31 @@
                 <p class="section-subtitle" style="margin: 0 auto;">Know exactly what cut you're looking for? We manufacture engagement rings in a variety of different diamond shapes.</p>
             </div>
             <div class="cuts-grid fade-in">
-                <a href="https://larasjewelry.com/product-category/engagement-rings/brilliant-cut/" class="cut-item">
+                <a href="#shop" data-shop-tab="engagement" data-filter-cut="brilliant" class="cut-item">
                     <img src="https://larasjewelry.com/wp-content/uploads/2021/02/brilliant-cut.png" alt="Brilliant Cut" loading="lazy">
                     <span>Brilliant</span>
                 </a>
-                <a href="https://larasjewelry.com/product-category/engagement-rings/cushion-cut/" class="cut-item">
+                <a href="#shop" data-shop-tab="engagement" data-filter-cut="cushion" class="cut-item">
                     <img src="https://larasjewelry.com/wp-content/uploads/2021/02/cushion-cut.png" alt="Cushion Cut" loading="lazy">
                     <span>Cushion</span>
                 </a>
-                <a href="https://larasjewelry.com/product-category/engagement-rings/emerald-cut/" class="cut-item">
+                <a href="#shop" data-shop-tab="engagement" data-filter-cut="emerald" class="cut-item">
                     <img src="https://larasjewelry.com/wp-content/uploads/2021/02/emerald-cut.png" alt="Emerald Cut" loading="lazy">
                     <span>Emerald</span>
                 </a>
-                <a href="https://larasjewelry.com/product-category/engagement-rings/oval-cut/" class="cut-item">
+                <a href="#shop" data-shop-tab="engagement" data-filter-cut="oval" class="cut-item">
                     <img src="https://larasjewelry.com/wp-content/uploads/2021/02/oval-cut.png" alt="Oval Cut" loading="lazy">
                     <span>Oval</span>
                 </a>
-                <a href="https://larasjewelry.com/product-category/engagement-rings/princess-cut/" class="cut-item">
+                <a href="#shop" data-shop-tab="engagement" data-filter-cut="princess" class="cut-item">
                     <img src="https://larasjewelry.com/wp-content/uploads/2021/02/princess-cut.png" alt="Princess Cut" loading="lazy">
                     <span>Princess</span>
                 </a>
-                <a href="https://larasjewelry.com/product-category/engagement-rings/radiant-cut/" class="cut-item">
+                <a href="#shop" data-shop-tab="engagement" data-filter-cut="radiant" class="cut-item">
                     <img src="https://larasjewelry.com/wp-content/uploads/2021/02/radiant-cut.png" alt="Radiant Cut" loading="lazy">
                     <span>Radiant</span>
                 </a>
-                <a href="https://larasjewelry.com/product-category/engagement-rings/pear-cut/" class="cut-item">
+                <a href="#shop" data-shop-tab="engagement" data-filter-cut="pear" class="cut-item">
                     <img src="https://larasjewelry.com/wp-content/uploads/2021/08/pear-shape.png" alt="Pear Cut" loading="lazy">
                     <span>Pear</span>
                 </a>
@@ -1158,10 +1616,10 @@
                 <div>
                     <h5>Collections</h5>
                     <ul>
-                        <li><a href="https://larasjewelry.com/product-category/engagement-rings/">Engagement Rings</a></li>
-                        <li><a href="https://larasjewelry.com/product-category/wedding-bands/">Wedding Bands</a></li>
-                        <li><a href="https://larasjewelry.com/product-category/fine-jewelry/">Fine Jewelry</a></li>
-                        <li><a href="https://larasjewelry.com/product-category/laras-collection/">Lara's Collection</a></li>
+                        <li><a href="#shop" data-shop-tab="engagement">Engagement Rings</a></li>
+                        <li><a href="#shop" data-shop-tab="bands">Wedding Bands</a></li>
+                        <li><a href="#shop" data-shop-tab="fine">Fine Jewelry</a></li>
+                        <li><a href="https://larasjewelry.com/la-custom-jewelry/">Custom Pieces</a></li>
                     </ul>
                 </div>
                 <div>
@@ -1169,7 +1627,7 @@
                     <ul>
                         <li><a href="https://larasjewelry.com/la-custom-jewelry/">Custom Design</a></li>
                         <li><a href="https://larasjewelry.com/sell-diamonds/">We Buy Gold</a></li>
-                        <li><a href="https://larasjewelry.com/diamond-education/">Diamond Education</a></li>
+                        <li><a href="https://larasjewelry.com/diamond-education/diamond-faq/">Diamond Education</a></li>
                         <li><a href="https://larasjewelry.com/diamond-education/diamond-faq/">Diamond FAQ</a></li>
                     </ul>
                 </div>
@@ -1271,6 +1729,107 @@
             });
         }, { threshold: 0.5 });
         trustItems.forEach(el => trustObs.observe(el));
+
+        // Shop category tab switching
+        const shopTabs = document.querySelectorAll('.shop-tab');
+        const shopContents = document.querySelectorAll('.shop-content');
+
+        function switchShopTab(category) {
+            shopTabs.forEach(t => t.classList.remove('active'));
+            shopContents.forEach(c => c.classList.remove('active'));
+            const targetTab = document.querySelector(`.shop-tab[data-category="${category}"]`);
+            const targetContent = document.querySelector(`.shop-content[data-category="${category}"]`);
+            if (targetTab) targetTab.classList.add('active');
+            if (targetContent) targetContent.classList.add('active');
+            // Re-trigger fade-in animations for newly visible cards
+            targetContent?.querySelectorAll('.fade-in').forEach(el => {
+                el.classList.remove('visible');
+                void el.offsetWidth; // force reflow
+                obs.observe(el);
+            });
+        }
+
+        shopTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                switchShopTab(tab.getAttribute('data-category'));
+            });
+        });
+
+        // Filter products by cut
+        function filterByCut(cut) {
+            const engagementContent = document.querySelector('.shop-content[data-category="engagement"]');
+            const cards = engagementContent.querySelectorAll('.product-card');
+            const noResults = engagementContent.querySelector('.shop-no-results');
+            const filterReset = engagementContent.querySelector('.shop-filter-reset');
+            const shopCta = engagementContent.querySelector('.shop-cta');
+            let matchCount = 0;
+            const cutLower = cut.toLowerCase();
+
+            cards.forEach(card => {
+                if (cut === 'all') {
+                    card.classList.remove('filter-hidden');
+                    card.classList.add('visible');
+                    matchCount++;
+                } else {
+                    const cardCut = (card.getAttribute('data-cut') || '').toLowerCase();
+                    if (cardCut === cutLower) {
+                        card.classList.remove('filter-hidden');
+                        card.classList.add('visible');
+                        matchCount++;
+                    } else {
+                        card.classList.add('filter-hidden');
+                    }
+                }
+            });
+
+            if (cut === 'all') {
+                noResults.style.display = 'none';
+                filterReset.style.display = 'none';
+                shopCta.style.display = '';
+            } else if (matchCount === 0) {
+                noResults.style.display = '';
+                noResults.querySelector('.filter-cut-name').textContent = cut;
+                filterReset.style.display = '';
+                shopCta.style.display = 'none';
+            } else {
+                noResults.style.display = 'none';
+                filterReset.style.display = '';
+                shopCta.style.display = '';
+            }
+        }
+
+        // Reset filter button
+        document.querySelector('.btn-reset-filter')?.addEventListener('click', () => {
+            filterByCut('all');
+        });
+
+        // Handle all links with data-shop-tab — scroll to shop section + switch tab
+        document.querySelectorAll('[data-shop-tab]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                if (link.classList.contains('shop-tab')) return; // tab buttons handled above
+                e.preventDefault();
+                const category = link.getAttribute('data-shop-tab');
+                switchShopTab(category);
+
+                // If this link also has a cut filter, apply it
+                const cutFilter = link.getAttribute('data-filter-cut');
+                if (cutFilter) {
+                    filterByCut(cutFilter.toLowerCase());
+                } else {
+                    filterByCut('all');
+                }
+
+                const shopSection = document.getElementById('shop');
+                const offset = header.offsetHeight + 16;
+                const top = shopSection.getBoundingClientRect().top + window.pageYOffset - offset;
+                window.scrollTo({ top, behavior: 'smooth' });
+            });
+        });
+
+        // Reset filter when switching tabs via tab buttons
+        shopTabs.forEach(tab => {
+            tab.addEventListener('click', () => filterByCut('all'));
+        });
     </script>
 
     </body>
