@@ -497,6 +497,35 @@
             }
             .shop-content { display: none; }
             .shop-content.active { display: block; }
+            .sub-tabs {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                margin-bottom: 32px;
+                justify-content: center;
+            }
+            .sub-tab {
+                padding: 8px 18px;
+                font-family: var(--sans);
+                font-size: 12px;
+                font-weight: 500;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                color: var(--medium-gray);
+                background: var(--light-gray);
+                border: 1px solid transparent;
+                border-radius: 24px;
+                cursor: pointer;
+                transition: var(--transition);
+            }
+            .sub-tab:hover { color: var(--gold); border-color: var(--gold); }
+            .sub-tab.active {
+                background: var(--charcoal);
+                color: var(--white);
+                border-color: var(--charcoal);
+            }
+            .subcategory-content { display: none; }
+            .subcategory-content.active { display: block; }
             .product-grid {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
@@ -881,6 +910,7 @@
                 .product-name { font-size: 14px; min-height: 40px; }
                 .shop-tabs { gap: 12px; }
                 .shop-tab { padding: 10px 20px; font-size: 12px; }
+                .sub-tab { padding: 6px 14px; font-size: 11px; }
                 .custom-design { padding: 80px 0; }
                 .custom-design-grid { grid-template-columns: 1fr; gap: 40px; }
                 .custom-images img { height: 180px; }
@@ -1009,74 +1039,18 @@
 
             <!-- Engagement Rings -->
             <div class="shop-content active" data-category="engagement">
+                <div class="sub-tabs">
+                    <button class="sub-tab active" data-parent="engagement" data-subcat="brilliant">Round Brilliant</button>
+                    <button class="sub-tab" data-parent="engagement" data-subcat="princess">Princess</button>
+                    <button class="sub-tab" data-parent="engagement" data-subcat="oval">Oval</button>
+                    <button class="sub-tab" data-parent="engagement" data-subcat="emerald">Emerald</button>
+                    <button class="sub-tab" data-parent="engagement" data-subcat="cushion">Cushion</button>
+                    <button class="sub-tab" data-parent="engagement" data-subcat="radiant">Radiant</button>
+                    <button class="sub-tab" data-parent="engagement" data-subcat="pear">Pear</button>
+                </div>
+                <div class="subcategory-content active" data-parent="engagement" data-subcat="brilliant">
                 <div class="product-grid">
-                    <div class="product-card fade-in" data-cut="brilliant">
-                        <div class="product-image">
-                            <img src="https://larasjewelry.com/wp-content/uploads/2022/02/Earring-2-768x768.jpg" alt="2.62 ct. Round Brilliant Cut Diamond Stud Earrings" loading="lazy">
-                        </div>
-                        <div class="product-info">
-                            <div class="product-name">2.62 ct. Round Brilliant Cut Diamond Stud Earrings</div>
-                            <div class="product-prices">
-                                <span class="product-price-original">$26,500</span>
-                                <span class="product-price-sale">$18,550</span>
-                            </div>
-                            <div class="product-specs">
-                                <span class="spec-badge">Brilliant</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card fade-in fade-in-delay-1" data-cut="princess">
-                        <div class="product-image">
-                            <img src="https://larasjewelry.com/wp-content/uploads/2021/09/46_a-1-768x768.jpg" alt="EGL 0.71 ct. Princess Diamond Engagement Ring" loading="lazy">
-                        </div>
-                        <div class="product-info">
-                            <div class="product-name">EGL 0.71 ct. Princess Diamond Engagement Ring</div>
-                            <div class="product-prices">
-                                <span class="product-price-original">$5,200</span>
-                                <span class="product-price-sale">$4,400</span>
-                            </div>
-                            <div class="product-specs">
-                                <span class="spec-badge">Princess</span>
-                                <span class="spec-badge">F Color</span>
-                                <span class="spec-badge">SI2</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card fade-in fade-in-delay-2" data-cut="asscher">
-                        <div class="product-image">
-                            <img src="https://larasjewelry.com/wp-content/uploads/2021/09/61_a-768x768.jpg" alt="EGL 1.01 ct. Asscher Diamond Engagement Ring" loading="lazy">
-                        </div>
-                        <div class="product-info">
-                            <div class="product-name">EGL 1.01 ct. Asscher Diamond Engagement Ring</div>
-                            <div class="product-prices">
-                                <span class="product-price-original">$8,600</span>
-                                <span class="product-price-sale">$5,500</span>
-                            </div>
-                            <div class="product-specs">
-                                <span class="spec-badge">Asscher</span>
-                                <span class="spec-badge">G Color</span>
-                                <span class="spec-badge">VS2</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card fade-in fade-in-delay-3" data-cut="oval">
-                        <div class="product-image">
-                            <img src="https://larasjewelry.com/wp-content/uploads/2022/10/85-768x768.jpg" alt="EGL 1.03 ct. Oval Cut Diamond Engagement Ring" loading="lazy">
-                        </div>
-                        <div class="product-info">
-                            <div class="product-name">EGL 1.03 ct. Oval Cut Diamond Engagement Ring</div>
-                            <div class="product-prices">
-                                <span class="product-price-original">$8,950</span>
-                                <span class="product-price-sale">$6,975</span>
-                            </div>
-                            <div class="product-specs">
-                                <span class="spec-badge">Oval</span>
-                                <span class="spec-badge">G Color</span>
-                                <span class="spec-badge">VS1</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card fade-in fade-in-delay-1" data-cut="brilliant">
+                    <div class="product-card fade-in">
                         <div class="product-image">
                             <img src="https://larasjewelry.com/wp-content/uploads/2022/10/86-768x768.jpg" alt="EGL 1.52 ct. Round Brilliant Diamond Engagement Ring" loading="lazy">
                         </div>
@@ -1086,16 +1060,500 @@
                                 <span class="product-price-original">$21,350</span>
                                 <span class="product-price-sale">$9,315</span>
                             </div>
-                            <div class="product-specs">
-                                <span class="spec-badge">Brilliant</span>
-                                <span class="spec-badge">H Color</span>
-                                <span class="spec-badge">VS1</span>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-1">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/08/80_a-768x768.jpg" alt="GIA 0.99 ct. Round Brilliant Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 0.99 ct. Round Brilliant Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$7,100</span>
+                                <span class="product-price-sale">$5,550</span>
                             </div>
                         </div>
                     </div>
-                    <div class="product-card fade-in fade-in-delay-2" data-cut="emerald">
+                    <div class="product-card fade-in fade-in-delay-2">
                         <div class="product-image">
-                            <img src="https://larasjewelry.com/wp-content/uploads/2021/09/56_a-768x768.jpg" alt="GIA 0.75 ct. Emerald Diamond Engagement Ring" loading="lazy">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/03/18_a-768x768.jpg" alt="GIA 1.00 ct. Round Brilliant Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.00 ct. Round Brilliant Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$13,930</span>
+                                <span class="product-price-sale">$8,900</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-3">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/04/26_a-768x768.jpg" alt="GIA 1.01 ct. Round Brilliant Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.01 ct. Round Brilliant Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$12,000</span>
+                                <span class="product-price-sale">$7,950</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/04/25_a-768x768.jpg" alt="GIA 1.03 ct. Round Brilliant Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.03 ct. Round Brilliant Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$15,650</span>
+                                <span class="product-price-sale">$10,300</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-1">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/03/20_a-768x768.jpg" alt="GIA 1.15 ct. Round Brilliant Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.15 ct. Round Brilliant Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$14,750</span>
+                                <span class="product-price-sale">$8,000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-2">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2023/01/89_a-768x768.jpg" alt="GIA 1.32 ct. Round Brilliant Cut Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.32 ct. Round Brilliant Cut Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$14,120</span>
+                                <span class="product-price-sale">$9,200</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-3">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/10/87-768x768.jpg" alt="GIA 1.32 ct. Round Brilliant Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.32 ct. Round Brilliant Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$18,260</span>
+                                <span class="product-price-sale">$11,000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/08/27_a-768x768.jpg" alt="GIA 1.51 ct. Round Brilliant Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.51 ct. Round Brilliant Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$20,800</span>
+                                <span class="product-price-sale">$12,900</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-1">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/08/30_a-768x768.jpg" alt="GIA 2.01 ct. Round Brilliant Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 2.01 ct. Round Brilliant Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$37,500</span>
+                                <span class="product-price-sale">$22,000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-2">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/08/32_a-768x768.jpg" alt="GIA 2.01 ct. Round Brilliant Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 2.01 ct. Round Brilliant Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$32,500</span>
+                                <span class="product-price-sale">$21,000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-3">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/08/84_a-1-768x768.jpg" alt="GIA 2.50 ct. Round Brilliant Cut Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 2.50 ct. Round Brilliant Cut Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$68,600</span>
+                                <span class="product-price-sale">$36,000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2023/02/32_a-1-768x768.jpg" alt="GIA 3.01 ct. Round Brilliant Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 3.01 ct. Round Brilliant Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$52,200</span>
+                                <span class="product-price-sale">$31,500</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop-cta fade-in">
+                    <a href="tel:+12136237717" class="btn-primary">Call for Full Catalog &mdash; (213) 623-7717</a>
+                </div>
+                </div>
+                <div class="subcategory-content" data-parent="engagement" data-subcat="princess">
+                <div class="product-grid">
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/09/46_a-1-768x768.jpg" alt="EGL 0.71 ct. Princess Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">EGL 0.71 ct. Princess Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$5,200</span>
+                                <span class="product-price-sale">$4,400</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-1">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2023/01/88_a-768x768.jpg" alt="EGL 2.04 ct. Princess Cut Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">EGL 2.04 ct. Princess Cut Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$13,700</span>
+                                <span class="product-price-sale">$8,950</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-2">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/09/49_a-768x768.jpg" alt="GIA 0.90 ct. Princess Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 0.90 ct. Princess Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$7,900</span>
+                                <span class="product-price-sale">$5,990</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-3">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/09/46_a-768x768.jpg" alt="GIA 1.00 ct. Princess Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.00 ct. Princess Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$7,700</span>
+                                <span class="product-price-sale">$5,850</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/08/36_a-768x768.jpg" alt="GIA 1.01 ct. Princess Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.01 ct. Princess Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$14,730</span>
+                                <span class="product-price-sale">$9,900</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-1">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2023/01/44_a-768x768.jpg" alt="GIA 1.01 ct. Princess Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.01 ct. Princess Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$7,330</span>
+                                <span class="product-price-sale">$5,700</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-2">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/09/47_a-768x768.jpg" alt="GIA 1.02 ct. Princess Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.02 ct. Princess Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$7,450</span>
+                                <span class="product-price-sale">$7,000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-3">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/01/42_a-768x768.jpg" alt="GIA 1.36 ct. Princess Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.36 ct. Princess Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$15,580</span>
+                                <span class="product-price-sale">$10,790</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/10/65_a-768x768.jpg" alt="GIA 1.54 ct. Princess Cut Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.54 ct. Princess Cut Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$14,900</span>
+                                <span class="product-price-sale">$9,950</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-1">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/09/43_a-768x768.jpg" alt="GIA 1.91 ct. Princess Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.91 ct. Princess Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$30,450</span>
+                                <span class="product-price-sale">$17,500</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop-cta fade-in">
+                    <a href="tel:+12136237717" class="btn-primary">Call for Full Catalog &mdash; (213) 623-7717</a>
+                </div>
+                </div>
+                <div class="subcategory-content" data-parent="engagement" data-subcat="oval">
+                <div class="product-grid">
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/10/85-768x768.jpg" alt="EGL 1.03 ct. Oval Cut Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">EGL 1.03 ct. Oval Cut Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$8,950</span>
+                                <span class="product-price-sale">$6,975</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-1">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/08/3_a-1-768x768.jpg" alt="GIA 0.50 ct. Oval Cut Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 0.50 ct. Oval Cut Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$3,250</span>
+                                <span class="product-price-sale">$2,500</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-2">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/08/4_a-1-768x768.jpg" alt="GIA 0.50 ct. Oval Cut Diamond, Pinkish-Brown" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 0.50 ct. Oval Cut Diamond, Pinkish-Brown</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$3,750</span>
+                                <span class="product-price-sale">$2,800</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-3">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/08/8_a-1-768x768.jpg" alt="GIA 0.77 ct. Oval Cut Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 0.77 ct. Oval Cut Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$4,950</span>
+                                <span class="product-price-sale">$3,800</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/08/6_a-1-768x768.jpg" alt="GIA 0.80 ct. Oval Cut Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 0.80 ct. Oval Cut Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$5,000</span>
+                                <span class="product-price-sale">$3,800</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-1">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/08/2_a-1-768x768.jpg" alt="GIA 1.00 ct. Oval Cut Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.00 ct. Oval Cut Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$8,680</span>
+                                <span class="product-price-sale">$6,500</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-2">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/08/5_a-1-1-768x768.jpg" alt="GIA 1.01 ct. Oval Cut Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.01 ct. Oval Cut Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$9,200</span>
+                                <span class="product-price-sale">$6,500</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-3">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/09/9_a-1-768x768.jpg" alt="GIA 1.01 ct. Oval Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.01 ct. Oval Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$11,000</span>
+                                <span class="product-price-sale">$8,050</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/08/1_a-1-768x768.jpg" alt="GIA 1.04 ct. Oval Cut Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.04 ct. Oval Cut Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$9,900</span>
+                                <span class="product-price-sale">$6,800</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-1">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/10/68_a-768x768.jpg" alt="GIA 1.20 ct. Oval Cut Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.20 ct. Oval Cut Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$10,500</span>
+                                <span class="product-price-sale">$7,500</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-2">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2023/02/90_a-768x768.jpg" alt="GIA 1.20 ct. Oval Cut Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.20 ct. Oval Cut Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$13,690</span>
+                                <span class="product-price-sale">$9,100</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-3">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/03/11_a-768x768.jpg" alt="GIA 1.50 ct. Oval Cut Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.50 ct. Oval Cut Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$18,600</span>
+                                <span class="product-price-sale">$12,300</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/08/5_a-1-1-768x768.jpg" alt="GIA 1.51 ct. Oval Cut Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.51 ct. Oval Cut Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$25,600</span>
+                                <span class="product-price-sale">$17,000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-1">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/03/9_a-768x768.jpg" alt="GIA 1.53 Ct. Oval Cut Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.53 Ct. Oval Cut Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$22,375</span>
+                                <span class="product-price-sale">$13,900</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-2">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/03/12_a-768x768.jpg" alt="GIA 2.00 ct. Oval Cut Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 2.00 ct. Oval Cut Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$37,810</span>
+                                <span class="product-price-sale">$21,900</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop-cta fade-in">
+                    <a href="tel:+12136237717" class="btn-primary">Call for Full Catalog &mdash; (213) 623-7717</a>
+                </div>
+                </div>
+                <div class="subcategory-content" data-parent="engagement" data-subcat="emerald">
+                <div class="product-grid">
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/09/61_a-768x768.jpg" alt="EGL 1.01 ct. Asscher Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">EGL 1.01 ct. Asscher Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$8,600</span>
+                                <span class="product-price-sale">$5,500</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-1">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/08/82_a-768x768.jpg" alt="GIA 0.52 ct. Emerald Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 0.52 ct. Emerald Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$3,100</span>
+                                <span class="product-price-sale">$2,900</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-2">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/09/58_a-1-768x768.jpg" alt="GIA 0.75 ct. Emerald Diamond Engagement Ring" loading="lazy">
                         </div>
                         <div class="product-info">
                             <div class="product-name">GIA 0.75 ct. Emerald Diamond Engagement Ring</div>
@@ -1103,16 +1561,11 @@
                                 <span class="product-price-original">$6,560</span>
                                 <span class="product-price-sale">$4,400</span>
                             </div>
-                            <div class="product-specs">
-                                <span class="spec-badge">Emerald</span>
-                                <span class="spec-badge">F Color</span>
-                                <span class="spec-badge">VVS1</span>
-                            </div>
                         </div>
                     </div>
-                    <div class="product-card fade-in fade-in-delay-3" data-cut="emerald">
+                    <div class="product-card fade-in fade-in-delay-3">
                         <div class="product-image">
-                            <img src="https://larasjewelry.com/wp-content/uploads/2021/09/51_a-768x768.jpg" alt="GIA 1.00 ct. Emerald Diamond Engagement Ring" loading="lazy">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/09/60_a-768x768.jpg" alt="GIA 1.00 ct. Emerald Diamond Engagement Ring" loading="lazy">
                         </div>
                         <div class="product-info">
                             <div class="product-name">GIA 1.00 ct. Emerald Diamond Engagement Ring</div>
@@ -1120,28 +1573,391 @@
                                 <span class="product-price-original">$9,600</span>
                                 <span class="product-price-sale">$7,300</span>
                             </div>
-                            <div class="product-specs">
-                                <span class="spec-badge">Emerald</span>
-                                <span class="spec-badge">D Color</span>
-                                <span class="spec-badge">VS2</span>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/09/58_a-768x768.jpg" alt="GIA 1.01 ct. Emerald Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.01 ct. Emerald Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$9,820</span>
+                                <span class="product-price-sale">$7,500</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-1">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/09/55_a-768x768.jpg" alt="GIA 1.46 ct. Emerald Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.46 ct. Emerald Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$17,750</span>
+                                <span class="product-price-sale">$13,720</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-2">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/09/57_a-768x768.jpg" alt="GIA 1.52 ct. Emerald Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.52 ct. Emerald Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$22,700</span>
+                                <span class="product-price-sale">$15,890</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="shop-no-results" style="display:none;">
-                    <p>We carry a wide selection of <span class="filter-cut-name"></span> cut diamonds in store.</p>
-                    <a href="tel:+12136230919" class="btn-primary" style="margin-top:20px;">Call to Browse — (213) 623-0919</a>
+                <div class="shop-cta fade-in">
+                    <a href="tel:+12136237717" class="btn-primary">Call for Full Catalog &mdash; (213) 623-7717</a>
                 </div>
-                <div class="shop-filter-reset" style="display:none;">
-                    <button class="btn-reset-filter">Show All Engagement Rings</button>
+                </div>
+                <div class="subcategory-content" data-parent="engagement" data-subcat="cushion">
+                <div class="product-grid">
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/08/40_a-768x768.jpg" alt="GIA 1.01 ct. Cushion Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.01 ct. Cushion Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$9,250</span>
+                                <span class="product-price-sale">$7,000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-1">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/08/38_a-1-768x768.jpg" alt="GIA 1.01 ct. Cushion Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.01 ct. Cushion Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$7,200</span>
+                                <span class="product-price-sale">$5,600</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-2">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/10/75_a-768x768.png" alt="GIA 1.07 ct. Cushion Cut Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.07 ct. Cushion Cut Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$6,600</span>
+                                <span class="product-price-sale">$5,300</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-3">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/08/39_a-768x768.jpg" alt="GIA 1.20 ct. Cushion Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.20 ct. Cushion Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$8,030</span>
+                                <span class="product-price-sale">$6,000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/08/81_a-768x768.jpg" alt="GIA 1.26 ct. Elongated Cushion Fancy-Intense Yellow Diamond Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.26 ct. Elongated Cushion Fancy-Intense Yellow Diamond Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$12,800</span>
+                                <span class="product-price-sale">$10,500</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-1">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/08/35_a-768x768.jpg" alt="GIA 1.32 ct. Cushion Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.32 ct. Cushion Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$11,500</span>
+                                <span class="product-price-sale">$8,600</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-2">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/08/38_a-768x768.jpg" alt="GIA 1.40 ct. Cushion Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.40 ct. Cushion Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$22,500</span>
+                                <span class="product-price-sale">$14,000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-3">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/10/74_a-768x768.png" alt="GIA 1.51 ct. Cushion Cut Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.51 ct. Cushion Cut Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$24,900</span>
+                                <span class="product-price-sale">$15,450</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/10/76_a-768x768.png" alt="GIA 1.54 ct. Cushion Cut Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.54 ct. Cushion Cut Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$15,530</span>
+                                <span class="product-price-sale">$10,400</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-1">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/08/41_a-768x768.jpg" alt="GIA 1.75 ct. Cushion Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.75 ct. Cushion Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$21,000</span>
+                                <span class="product-price-sale">$13,500</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-2">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/08/34_a-768x768.jpg" alt="GIA 2.01 ct. Cushion Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 2.01 ct. Cushion Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$33,300</span>
+                                <span class="product-price-sale">$20,500</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="shop-cta fade-in">
-                    <a href="tel:+12136230919" class="btn-primary">Call for Full Catalog — (213) 623-0919</a>
+                    <a href="tel:+12136237717" class="btn-primary">Call for Full Catalog &mdash; (213) 623-7717</a>
+                </div>
+                </div>
+                <div class="subcategory-content" data-parent="engagement" data-subcat="radiant">
+                <div class="product-grid">
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/08/17_a-1-768x768.jpg" alt="GIA 1.00 ct. Radiant Cut Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.00 ct. Radiant Cut Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$8,000</span>
+                                <span class="product-price-sale">$5,900</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-1">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/10/70_a-768x768.jpg" alt="GIA 1.01 ct. Radiant Cut Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.01 ct. Radiant Cut Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$8,430</span>
+                                <span class="product-price-sale">$6,215</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-2">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/03/15_a-768x768.jpg" alt="GIA 1.05 ct. Radiant Cut Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.05 ct. Radiant Cut Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$10,300</span>
+                                <span class="product-price-sale">$6,700</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-3">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/10/66_a-768x768.jpg" alt="GIA 1.51 ct. Radiant Cut Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.51 ct. Radiant Cut Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$16,700</span>
+                                <span class="product-price-sale">$10,850</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/10/69_a-768x768.jpg" alt="GIA 1.52 ct. Radiant Cut Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.52 ct. Radiant Cut Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$13,920</span>
+                                <span class="product-price-sale">$9,400</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-1">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2023/02/91_a-768x768.jpg" alt="GIA 1.70 ct. Radiant Cut Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.70 ct. Radiant Cut Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$29,990</span>
+                                <span class="product-price-sale">$18,000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-2">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/03/22_a-768x768.jpg" alt="GIA 2.01 ct. Radiant Cut Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 2.01 ct. Radiant Cut Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$37,500</span>
+                                <span class="product-price-sale">$23,750</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-3">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/02/79_a-1-768x768.jpg" alt="GIA 2.50 ct. Radiant Cut Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 2.50 ct. Radiant Cut Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$45,500</span>
+                                <span class="product-price-sale">$35,000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/03/23_a-768x768.jpg" alt="GIA 4.10 ct. Radiant Cut Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 4.10 ct. Radiant Cut Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$105,000</span>
+                                <span class="product-price-sale">$65,000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop-cta fade-in">
+                    <a href="tel:+12136237717" class="btn-primary">Call for Full Catalog &mdash; (213) 623-7717</a>
+                </div>
+                </div>
+                <div class="subcategory-content" data-parent="engagement" data-subcat="pear">
+                <div class="product-grid">
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/09/52_a-768x768.jpg" alt="GIA 1.06 ct. Pear Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.06 ct. Pear Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$10,700</span>
+                                <span class="product-price-sale">$7,490</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-1">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/10/64_a-768x768.jpg" alt="GIA 1.20 ct. Pear Shape Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.20 ct. Pear Shape Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$15,750</span>
+                                <span class="product-price-sale">$11,025</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-2">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/09/52_a-1-768x768.jpg" alt="GIA 1.51 ct. Pear Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.51 ct. Pear Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$19,500</span>
+                                <span class="product-price-sale">$12,750</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-3">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/09/50_a-768x768.jpg" alt="GIA 1.60 ct. Pear Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.60 ct. Pear Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$23,350</span>
+                                <span class="product-price-sale">$17,512</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/10/67_a-768x768.jpg" alt="GIA 1.70 ct. Pear Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 1.70 ct. Pear Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$25,900</span>
+                                <span class="product-price-sale">$18,130</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-1">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/09/51_a-768x768.jpg" alt="GIA 2.02 ct. Pear Diamond Engagement Ring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">GIA 2.02 ct. Pear Diamond Engagement Ring</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$37,300</span>
+                                <span class="product-price-sale">$26,110</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop-cta fade-in">
+                    <a href="tel:+12136237717" class="btn-primary">Call for Full Catalog &mdash; (213) 623-7717</a>
+                </div>
                 </div>
             </div>
 
             <!-- Wedding Bands -->
             <div class="shop-content" data-category="bands">
+                <div class="sub-tabs">
+                    <button class="sub-tab active" data-parent="bands" data-subcat="womens">Women's Bands</button>
+                    <button class="sub-tab" data-parent="bands" data-subcat="mens">Men's Bands</button>
+                </div>
+                <div class="subcategory-content active" data-parent="bands" data-subcat="womens">
                 <div class="product-grid">
                     <div class="product-card fade-in">
                         <div class="product-image">
@@ -1191,21 +2007,45 @@
                             </div>
                         </div>
                     </div>
-                    <div class="product-card fade-in fade-in-delay-1">
+                    <div class="product-card fade-in">
                         <div class="product-image">
-                            <img src="https://larasjewelry.com/wp-content/uploads/2022/02/Band-29-768x768.jpg" alt="3.05 ct. Round Brilliant Cut Diamond Eternity Band" loading="lazy">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/02/Band-29-768x768.jpg" alt="3.05ct Round Brilliant Cut Diamond Eternity Band" loading="lazy">
                         </div>
                         <div class="product-info">
-                            <div class="product-name">3.05 ct. Round Brilliant Cut Diamond Eternity Band</div>
+                            <div class="product-name">3.05ct Round Brilliant Cut Diamond Eternity Band</div>
                             <div class="product-prices">
                                 <span class="product-price-original">$5,475</span>
                                 <span class="product-price-sale">$4,650</span>
                             </div>
                         </div>
                     </div>
+                    <div class="product-card fade-in fade-in-delay-1">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/02/Band-29-768x768.jpg" alt="4.60 ct. Round Brilliant Cut Diamond Eternity Band" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">4.60 ct. Round Brilliant Cut Diamond Eternity Band</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$8,100</span>
+                                <span class="product-price-sale">$6,900</span>
+                            </div>
+                        </div>
+                    </div>
                     <div class="product-card fade-in fade-in-delay-2">
                         <div class="product-image">
-                            <img src="https://larasjewelry.com/wp-content/uploads/2022/02/Band-31-768x768.jpg" alt="5.14 ct. Round Brilliant Cut Diamond Eternity Band" loading="lazy">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/02/Band-29-768x768.jpg" alt="4.80 ct Round Brilliant Cut Diamond Eternity Band" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">4.80 ct Round Brilliant Cut Diamond Eternity Band</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$11,450</span>
+                                <span class="product-price-sale">$8,700</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-3">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/03/Band-30-768x768.jpg" alt="5.14 ct. Round Brilliant Cut Diamond Eternity Band" loading="lazy">
                         </div>
                         <div class="product-info">
                             <div class="product-name">5.14 ct. Round Brilliant Cut Diamond Eternity Band</div>
@@ -1215,9 +2055,21 @@
                             </div>
                         </div>
                     </div>
-                    <div class="product-card fade-in fade-in-delay-3">
+                    <div class="product-card fade-in">
                         <div class="product-image">
-                            <img src="https://larasjewelry.com/wp-content/uploads/2022/08/Band-35-768x768.jpg" alt="9.01 ct. Emerald Cut Diamond Eternity Band" loading="lazy">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/02/Band-31-768x768.jpg" alt="5.42 ct. Oval Cut Diamond Eternity Band" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">5.42 ct. Oval Cut Diamond Eternity Band</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$14,000</span>
+                                <span class="product-price-sale">$11,200</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-1">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/08/Band-36-768x768.jpg" alt="9.01 ct. Emerald Cut Diamond Eternity Band" loading="lazy">
                         </div>
                         <div class="product-info">
                             <div class="product-name">9.01 ct. Emerald Cut Diamond Eternity Band</div>
@@ -1225,21 +2077,287 @@
                                 <span class="product-price-original">$41,500</span>
                                 <span class="product-price-sale">$27,000</span>
                             </div>
-                            <div class="product-specs">
-                                <span class="spec-badge">Emerald</span>
-                                <span class="spec-badge">E Color</span>
-                                <span class="spec-badge">VS1</span>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-2">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/09/Band-23-768x768.jpg" alt="Diamond Eternity Band" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Diamond Eternity Band</div>
+                            <div class="product-prices">
+                                <span class="product-price-sale">$1,700</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-3">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/09/Band-17-768x768.jpg" alt="Diamond Wedding Band" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Diamond Wedding Band</div>
+                            <div class="product-prices">
+                                <span class="product-price-sale">$800</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/09/Band-18-768x768.jpg" alt="Diamond Wedding Band" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Diamond Wedding Band</div>
+                            <div class="product-prices">
+                                <span class="product-price-sale">$630</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-1">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/09/Band-19-768x768.jpg" alt="Diamond Wedding Band" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Diamond Wedding Band</div>
+                            <div class="product-prices">
+                                <span class="product-price-sale">$770</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-2">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/09/Band-20-768x768.jpg" alt="Diamond Wedding Band" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Diamond Wedding Band</div>
+                            <div class="product-prices">
+                                <span class="product-price-sale">$1,010</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-3">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/09/Band-21-768x768.jpg" alt="Diamond Wedding Band" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Diamond Wedding Band</div>
+                            <div class="product-prices">
+                                <span class="product-price-sale">$1,350</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="shop-cta fade-in">
-                    <a href="tel:+12136230919" class="btn-primary">Call for Full Catalog — (213) 623-0919</a>
+                    <a href="tel:+12136237717" class="btn-primary">Call for Full Catalog &mdash; (213) 623-7717</a>
+                </div>
+                </div>
+                <div class="subcategory-content" data-parent="bands" data-subcat="mens">
+                <div class="product-grid">
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/10/Mens-Band-9-768x768.jpg" alt="Men's Classic Comfort Fit Wedding Band 6.00 mm" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Men's Classic Comfort Fit Wedding Band 6.00 mm</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$1,100</span>
+                                <span class="product-price-sale">$600</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-1">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/10/Mens-Band-3-768x768.jpg" alt="Men's Comfort Fit Classic 6.00 mm Wedding Band" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Men's Comfort Fit Classic 6.00 mm Wedding Band</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$1,100</span>
+                                <span class="product-price-sale">$600</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-2">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/10/Mens-Band-8-768x768.jpg" alt="Men's Comfort Fit Tri Color Wedding Band 5.50 mm" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Men's Comfort Fit Tri Color Wedding Band 5.50 mm</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$1,100</span>
+                                <span class="product-price-sale">$600</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-3">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/10/Mens-Band-6-768x768.jpg" alt="Men's Comfort Fit Two-Tone Wedding Band 7.00 mm" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Men's Comfort Fit Two-Tone Wedding Band 7.00 mm</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$1,200</span>
+                                <span class="product-price-sale">$695</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/10/Mens-Band-5-768x768.jpg" alt="Men's Comfort Fit Two-Tone Wedding Band 7.00 mm" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Men's Comfort Fit Two-Tone Wedding Band 7.00 mm</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$1,200</span>
+                                <span class="product-price-sale">$695</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-1">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/10/Mens-Band-10-768x768.jpg" alt="Men's Comfort Fit Wedding Band 10.00 mm" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Men's Comfort Fit Wedding Band 10.00 mm</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$2,900</span>
+                                <span class="product-price-sale">$1,200</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-2">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/10/Mens-Band-1-768x768.jpg" alt="Men's Comfort Fit Wedding Band 7.00 mm" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Men's Comfort Fit Wedding Band 7.00 mm</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$1,200</span>
+                                <span class="product-price-sale">$695</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-3">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/10/Mens-Band-2-768x768.jpg" alt="Men's Comfort Fit Wedding Band 7.00 mm" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Men's Comfort Fit Wedding Band 7.00 mm</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$1,200</span>
+                                <span class="product-price-sale">$695</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/10/Mens-Band-18-768x768.jpg" alt="Men's Comfort Fit Wedding Band 7.00 mm" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Men's Comfort Fit Wedding Band 7.00 mm</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$1,400</span>
+                                <span class="product-price-sale">$810</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-1">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/10/Mens-Band-7-768x768.jpg" alt="Men's Comfort Fit Wedding Band 7.00 mm" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Men's Comfort Fit Wedding Band 7.00 mm</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$1,400</span>
+                                <span class="product-price-sale">$800</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-2">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/10/Mens-Band-12-768x768.jpg" alt="Men's Comfort Fit Wedding Band 7.00 mm" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Men's Comfort Fit Wedding Band 7.00 mm</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$1,200</span>
+                                <span class="product-price-sale">$695</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-3">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/10/Mens-Band-13-768x768.jpg" alt="Men's Comfort Fit Wedding Band 7.00 mm" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Men's Comfort Fit Wedding Band 7.00 mm</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$1,200</span>
+                                <span class="product-price-sale">$695</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/10/Mens-Band-11-768x768.jpg" alt="Men's Comfort Fit Wedding Band 7.00 mm" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Men's Comfort Fit Wedding Band 7.00 mm</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$1,200</span>
+                                <span class="product-price-sale">$695</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-1">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/10/Mens-Band-15-768x768.jpg" alt="Men's Comfort Fit Wedding Band 7.00mm" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Men's Comfort Fit Wedding Band 7.00mm</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$1,200</span>
+                                <span class="product-price-sale">$695</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-2">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/10/Mens-Band-19-768x768.jpg" alt="Men's Comfort Fit Wedding Band 8.00 mm" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Men's Comfort Fit Wedding Band 8.00 mm</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$1,700</span>
+                                <span class="product-price-sale">$900</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-3">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2021/10/Mens-Band-21-768x768.jpg" alt="Men's Comfort Fit Wedding Band 8.00 mm" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Men's Comfort Fit Wedding Band 8.00 mm</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$1,700</span>
+                                <span class="product-price-sale">$900</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop-cta fade-in">
+                    <a href="tel:+12136237717" class="btn-primary">Call for Full Catalog &mdash; (213) 623-7717</a>
+                </div>
                 </div>
             </div>
 
             <!-- Fine Jewelry -->
             <div class="shop-content" data-category="fine">
+                <div class="sub-tabs">
+                    <button class="sub-tab active" data-parent="fine" data-subcat="earrings">Earrings</button>
+                    <button class="sub-tab" data-parent="fine" data-subcat="necklaces">Necklaces &amp; Pendants</button>
+                </div>
+                <div class="subcategory-content active" data-parent="fine" data-subcat="earrings">
                 <div class="product-grid">
                     <div class="product-card fade-in">
                         <div class="product-image">
@@ -1255,6 +2373,18 @@
                     </div>
                     <div class="product-card fade-in fade-in-delay-1">
                         <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/03/Earring-2-1-768x768.jpg" alt="0.72 ct. Round Brilliant Cut Diamond Stud Earrings" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">0.72 ct. Round Brilliant Cut Diamond Stud Earrings</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$2,310</span>
+                                <span class="product-price-sale">$1,850</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-2">
+                        <div class="product-image">
                             <img src="https://larasjewelry.com/wp-content/uploads/2022/02/Earring-2-768x768.jpg" alt="0.74 ct. Round Brilliant Cut Diamond Stud Earrings" loading="lazy">
                         </div>
                         <div class="product-info">
@@ -1265,7 +2395,19 @@
                             </div>
                         </div>
                     </div>
-                    <div class="product-card fade-in fade-in-delay-2">
+                    <div class="product-card fade-in fade-in-delay-3">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/02/Earring-2-768x768.jpg" alt="0.80 ct. Round Brilliant Cut Diamond Stud Earrings" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">0.80 ct. Round Brilliant Cut Diamond Stud Earrings</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$3,135</span>
+                                <span class="product-price-sale">$2,820</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in">
                         <div class="product-image">
                             <img src="https://larasjewelry.com/wp-content/uploads/2022/11/Earring-5-1-768x768.jpg" alt="0.81 ct. Princess Cut Diamond Stud Earrings" loading="lazy">
                         </div>
@@ -1277,7 +2419,43 @@
                             </div>
                         </div>
                     </div>
+                    <div class="product-card fade-in fade-in-delay-1">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/03/Earring-2-1-768x768.jpg" alt="0.81 ct. Round Brilliant Cut Diamond Stud Earrings" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">0.81 ct. Round Brilliant Cut Diamond Stud Earrings</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$2,695</span>
+                                <span class="product-price-sale">$2,300</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-2">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/02/Earring-4-768x768.jpg" alt="1.00 ct. Cushion Cut Diamond Stud Earrings" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">1.00 ct. Cushion Cut Diamond Stud Earrings</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$3,100</span>
+                                <span class="product-price-sale">$2,790</span>
+                            </div>
+                        </div>
+                    </div>
                     <div class="product-card fade-in fade-in-delay-3">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/11/Earring-6-768x768.jpg" alt="1.00 ct. Heart Shape Diamond Stud Earrings" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">1.00 ct. Heart Shape Diamond Stud Earrings</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$4,500</span>
+                                <span class="product-price-sale">$3,825</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in">
                         <div class="product-image">
                             <img src="https://larasjewelry.com/wp-content/uploads/2022/02/Earring-2-768x768.jpg" alt="1.00 ct. Round Brilliant Cut Diamond Stud Earrings" loading="lazy">
                         </div>
@@ -1291,7 +2469,55 @@
                     </div>
                     <div class="product-card fade-in fade-in-delay-1">
                         <div class="product-image">
-                            <img src="https://larasjewelry.com/wp-content/uploads/2022/02/Earring-2-768x768.jpg" alt="1.40 ct. Round Brilliant Cut Diamond Stud Earrings" loading="lazy">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/02/Earring-5-768x768.jpg" alt="1.04 ct. Princess Cut Diamond Stud Earrings" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">1.04 ct. Princess Cut Diamond Stud Earrings</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$4,250</span>
+                                <span class="product-price-sale">$3,400</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-2">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/11/Earrings-14-768x768.jpg" alt="1.18 ct. Round Halo Diamond Stud Earrings" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">1.18 ct. Round Halo Diamond Stud Earrings</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$3,180</span>
+                                <span class="product-price-sale">$2,790</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-3">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/02/Earring-2-768x768.jpg" alt="1.20 ct. Round Brilliant Cut Diamond Stud Earrings" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">1.20 ct. Round Brilliant Cut Diamond Stud Earrings</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$4,540</span>
+                                <span class="product-price-sale">$3,770</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/11/Earrings-13-768x768.jpg" alt="1.21 ct. Round Cushion Halo Diamond Stud Earrings" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">1.21 ct. Round Cushion Halo Diamond Stud Earrings</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$3,400</span>
+                                <span class="product-price-sale">$2,900</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-1">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/03/Earring-2-1-768x768.jpg" alt="1.40 ct. Round Brilliant Cut Diamond Stud Earrings" loading="lazy">
                         </div>
                         <div class="product-info">
                             <div class="product-name">1.40 ct. Round Brilliant Cut Diamond Stud Earrings</div>
@@ -1303,20 +2529,233 @@
                     </div>
                     <div class="product-card fade-in fade-in-delay-2">
                         <div class="product-image">
-                            <img src="https://larasjewelry.com/wp-content/uploads/2022/11/Earring-5-1-768x768.jpg" alt="1.18 ct. Round Halo Diamond Stud Earrings" loading="lazy">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/02/Earring-5-768x768.jpg" alt="1.49 ct. Princess Cut Diamond Stud Earrings" loading="lazy">
                         </div>
                         <div class="product-info">
-                            <div class="product-name">1.18 ct. Round Halo Diamond Stud Earrings</div>
+                            <div class="product-name">1.49 ct. Princess Cut Diamond Stud Earrings</div>
                             <div class="product-prices">
-                                <span class="product-price-original">$3,180</span>
-                                <span class="product-price-sale">$2,790</span>
+                                <span class="product-price-original">$8,000</span>
+                                <span class="product-price-sale">$6,000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-3">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/03/Earring-2-1-768x768.jpg" alt="2.03 ct. Round Brilliant Cut Diamond Stud Earrings" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">2.03 ct. Round Brilliant Cut Diamond Stud Earrings</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$21,500</span>
+                                <span class="product-price-sale">$15,050</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="shop-cta fade-in">
-                    <a href="tel:+12136230919" class="btn-primary">Call for Full Catalog — (213) 623-0919</a>
+                    <a href="tel:+12136237717" class="btn-primary">Call for Full Catalog &mdash; (213) 623-7717</a>
                 </div>
+                </div>
+                <div class="subcategory-content" data-parent="fine" data-subcat="necklaces">
+                <div class="product-grid">
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/08/Necklace-4-768x768.jpg" alt="12.01 ct. Tennis Necklace" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">12.01 ct. Tennis Necklace</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$20,750</span>
+                                <span class="product-price-sale">$14,400</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-1">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/10/Necklace-7-768x768.jpg" alt="12.07 ct. Diamond Tennis Necklace" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">12.07 ct. Diamond Tennis Necklace</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$20,750</span>
+                                <span class="product-price-sale">$14,400</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-2">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/08/Necklace-3-1-768x768.jpg" alt="16.89 ct. Tennis Necklace" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">16.89 ct. Tennis Necklace</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$39,500</span>
+                                <span class="product-price-sale">$25,300</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-3">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/10/Necklace-2-768x768.jpg" alt="2.46 ct. Emerald Cut Diamond Necklace/Choker" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">2.46 ct. Emerald Cut Diamond Necklace/Choker</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$6,910</span>
+                                <span class="product-price-sale">$5,300</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/10/Necklace-7-768x768.jpg" alt="21.44 ct. Tennis Necklace" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">21.44 ct. Tennis Necklace</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$37,800</span>
+                                <span class="product-price-sale">$23,900</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-1">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/11/Necklace-12-768x768.jpg" alt="Bezel Solitaire Pendant" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Bezel Solitaire Pendant</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$1,680</span>
+                                <span class="product-price-sale">$1,580</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-2">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2023/01/Necklace-17-768x768.jpg" alt="Butterfly Diamond Pendant" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Butterfly Diamond Pendant</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$990</span>
+                                <span class="product-price-sale">$875</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-3">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2023/01/Necklace-15-768x768.jpg" alt="Butterfly Diamond Pendant" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Butterfly Diamond Pendant</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$1,700</span>
+                                <span class="product-price-sale">$1,450</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2023/01/Necklace-16-768x768.jpg" alt="Butterfly Diamond Pendant" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Butterfly Diamond Pendant</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$1,700</span>
+                                <span class="product-price-sale">$1,450</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-1">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2023/02/Necklace-21-768x768.jpg" alt="Diamond Cross Pendant" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Diamond Cross Pendant</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$1,275</span>
+                                <span class="product-price-sale">$1,000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-2">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2023/02/Necklace-20-768x768.jpg" alt="Diamond Cross Pendant" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Diamond Cross Pendant</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$4,200</span>
+                                <span class="product-price-sale">$3,300</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-3">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2023/01/Necklace-18-768x768.jpg" alt="Diamond Drop Pendant" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Diamond Drop Pendant</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$2,520</span>
+                                <span class="product-price-sale">$2,000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/08/Necklace-1-768x768.jpg" alt="Diamond Halo Pendant" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Diamond Halo Pendant</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$4,800</span>
+                                <span class="product-price-sale">$3,400</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-1">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/10/Necklace-6-768x768.jpg" alt="Diamond Halo Pendant" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Diamond Halo Pendant</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$3,900</span>
+                                <span class="product-price-sale">$3,300</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-2">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/10/Necklace-5-768x768.jpg" alt="Diamond Halo Pendant" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Diamond Halo Pendant</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$3,480</span>
+                                <span class="product-price-sale">$3,240</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card fade-in fade-in-delay-3">
+                        <div class="product-image">
+                            <img src="https://larasjewelry.com/wp-content/uploads/2022/11/Necklace-13-768x768.jpg" alt="Double Halo Diamond Pendant" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Double Halo Diamond Pendant</div>
+                            <div class="product-prices">
+                                <span class="product-price-original">$1,400</span>
+                                <span class="product-price-sale">$1,200</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop-cta fade-in">
+                    <a href="tel:+12136237717" class="btn-primary">Call for Full Catalog &mdash; (213) 623-7717</a>
+                </div>
+                </div>
+            </div>
             </div>
         </div>
     </section>
@@ -1772,52 +3211,22 @@
             });
         });
 
-        // Filter products by cut
-        function filterByCut(cut) {
-            const engagementContent = document.querySelector('.shop-content[data-category="engagement"]');
-            const cards = engagementContent.querySelectorAll('.product-card');
-            const noResults = engagementContent.querySelector('.shop-no-results');
-            const filterReset = engagementContent.querySelector('.shop-filter-reset');
-            const shopCta = engagementContent.querySelector('.shop-cta');
-            let matchCount = 0;
-            const cutLower = cut.toLowerCase();
+        // Cut filtering now handled by sub-tabs
 
-            cards.forEach(card => {
-                if (cut === 'all') {
-                    card.classList.remove('filter-hidden');
-                    card.classList.add('visible');
-                    matchCount++;
-                } else {
-                    const cardCut = (card.getAttribute('data-cut') || '').toLowerCase();
-                    if (cardCut === cutLower) {
-                        card.classList.remove('filter-hidden');
-                        card.classList.add('visible');
-                        matchCount++;
-                    } else {
-                        card.classList.add('filter-hidden');
-                    }
-                }
+
+        // Sub-tab switching
+        document.querySelectorAll('.sub-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                const parent = tab.getAttribute('data-parent');
+                const subcat = tab.getAttribute('data-subcat');
+                // Deactivate all sub-tabs in this parent
+                document.querySelectorAll(`.sub-tab[data-parent="${parent}"]`).forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                // Show/hide subcategory content
+                document.querySelectorAll(`.subcategory-content[data-parent="${parent}"]`).forEach(c => c.classList.remove('active'));
+                const target = document.querySelector(`.subcategory-content[data-parent="${parent}"][data-subcat="${subcat}"]`);
+                if (target) target.classList.add('active');
             });
-
-            if (cut === 'all') {
-                noResults.style.display = 'none';
-                filterReset.style.display = 'none';
-                shopCta.style.display = '';
-            } else if (matchCount === 0) {
-                noResults.style.display = '';
-                noResults.querySelector('.filter-cut-name').textContent = cut;
-                filterReset.style.display = '';
-                shopCta.style.display = 'none';
-            } else {
-                noResults.style.display = 'none';
-                filterReset.style.display = '';
-                shopCta.style.display = '';
-            }
-        }
-
-        // Reset filter button
-        document.querySelector('.btn-reset-filter')?.addEventListener('click', () => {
-            filterByCut('all');
         });
 
         // Handle all links with data-shop-tab — scroll to shop section + switch tab
@@ -1828,12 +3237,11 @@
                 const category = link.getAttribute('data-shop-tab');
                 switchShopTab(category);
 
-                // If this link also has a cut filter, apply it
+                // If this link also has a cut filter, switch to that sub-tab
                 const cutFilter = link.getAttribute('data-filter-cut');
                 if (cutFilter) {
-                    filterByCut(cutFilter.toLowerCase());
-                } else {
-                    filterByCut('all');
+                    const subTab = document.querySelector(`.sub-tab[data-parent="${category}"][data-subcat="${cutFilter.toLowerCase()}"]`);
+                    if (subTab) subTab.click();
                 }
 
                 const shopSection = document.getElementById('shop');
@@ -1843,9 +3251,13 @@
             });
         });
 
-        // Reset filter when switching tabs via tab buttons
+        // Reset sub-tabs when switching main tabs
         shopTabs.forEach(tab => {
-            tab.addEventListener('click', () => filterByCut('all'));
+            tab.addEventListener('click', () => {
+                const cat = tab.getAttribute('data-category');
+                const firstSubTab = document.querySelector(`.sub-tab[data-parent="${cat}"]`);
+                if (firstSubTab && !firstSubTab.classList.contains('active')) firstSubTab.click();
+            });
         });
     </script>
 
