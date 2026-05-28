@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MUSE The Beauty Society | Esthetics &amp; Skincare Studio — Syracuse, NY</title>
+<meta name="description" content="MUSE The Beauty Society by Alexis M. Brown — an esthetics and skincare studio in Syracuse, New York offering facials, skincare treatments, brows & lashes, waxing, and event glow prep. Where beauty meets self-care.">
+<!--
+  OWNER SETUP — replace the placeholders below when your details are ready:
+  • Phone, email, and social links (search "OWNER:" in this file)
+  • Add your real service menu and pricing once finalized
+  • Connect the contact form to an email service (Formspree, Netlify Forms, etc.) — see the <form> tag
+  Real facts used: business name, owner (Alexis M. Brown), town (Syracuse, NY), category (esthetics / skincare studio).
+  Everything else is illustrative copy you can edit freely.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --bg:#f7f1ee; --cream:#fdfaf8; --blush:#e8c4c0; --blush-dk:#d7a8a3;
+    --char:#1a1718; --ink:#2b2526; --muted:#8c7f7c; --gold:#c9a24b;
+    --display:'Cormorant Garamond',Georgia,serif; --sans:'Inter',system-ui,sans-serif;
+    --max:1160px; --ease:cubic-bezier(.22,.61,.36,1);
+  }
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.7;font-weight:300;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 32px}
+  h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.08;letter-spacing:.005em}
+  .eyebrow{font-size:11px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+  .btn{display:inline-block;padding:15px 38px;font-weight:500;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;transition:all .35s var(--ease)}
+  .btn-primary{background:var(--char);color:var(--cream);border:1px solid var(--char)}
+  .btn-primary:hover{background:transparent;color:var(--char)}
+  .btn-ghost{border:1px solid var(--char);color:var(--char)}
+  .btn-ghost:hover{background:var(--char);color:var(--cream)}
+
+  /* header */
+  header{position:sticky;top:0;z-index:50;background:rgba(247,241,238,.88);backdrop-filter:blur(12px);border-bottom:1px solid rgba(26,23,24,.08)}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:22px 32px;max-width:var(--max);margin:0 auto}
+  .logo{font-family:var(--display);font-size:27px;font-weight:600;color:var(--char);letter-spacing:2px}
+  .logo span{font-size:12px;letter-spacing:3px;color:var(--gold);font-family:var(--sans);font-weight:600;text-transform:uppercase}
+  .nav-links{display:flex;gap:38px;align-items:center}
+  .nav-links a{font-weight:400;font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--ink);transition:color .25s}
+  .nav-links a:hover{color:var(--gold)}
+  .nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer}
+  .nav-toggle span{width:26px;height:1.5px;background:var(--char);transition:.3s}
+
+  /* hero — refined, spacious */
+  .hero{position:relative;padding:140px 0 150px;overflow:hidden;background:
+    radial-gradient(ellipse 50% 60% at 82% 30%,rgba(232,196,192,.5),transparent 60%),var(--cream)}
+  .hero-inner{max-width:740px;position:relative;z-index:2}
+  .hero h1{font-size:clamp(48px,8vw,96px);margin:0 0 26px;font-weight:400}
+  .hero h1 em{font-style:italic;color:var(--blush-dk)}
+  .hero p{font-size:clamp(16px,2vw,19px);color:var(--muted);max-width:500px;margin-bottom:40px;font-weight:300}
+  .hero-cta{display:flex;gap:18px;flex-wrap:wrap}
+  .gleam{position:absolute;width:1px;height:120px;background:linear-gradient(var(--gold),transparent);top:140px;left:32px;opacity:.6}
+  .hero-deco{position:absolute;right:-80px;bottom:-100px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,var(--blush),transparent 70%);opacity:.5;filter:blur(20px);pointer-events:none}
+
+  section{padding:110px 0}
+  .section-head{max-width:640px;margin-bottom:64px}
+  .section-head h2{font-size:clamp(36px,5.5vw,60px);margin-bottom:16px;font-weight:400}
+  .section-head p{color:var(--muted);font-size:16px}
+
+  /* about */
+  .about{background:var(--bg)}
+  .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:80px;align-items:center}
+  .about-card{position:relative;background:linear-gradient(160deg,var(--blush),var(--char));aspect-ratio:3/4;display:flex;align-items:flex-end;color:var(--cream);font-family:var(--display);font-style:italic;font-size:clamp(24px,3.4vw,34px);padding:38px;box-shadow:0 30px 60px rgba(26,23,24,.22)}
+  .about-card::before{content:"";position:absolute;top:18px;left:18px;right:18px;bottom:18px;border:1px solid rgba(255,255,255,.4)}
+  .about-card span{position:relative;z-index:2}
+  .about p{color:var(--muted);margin-bottom:20px;font-size:16px}
+  .about h2{font-size:clamp(32px,4.5vw,52px);margin-bottom:18px;font-weight:400}
+
+  /* offerings */
+  .offer{background:var(--cream)}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(26,23,24,.1);border:1px solid rgba(26,23,24,.1)}
+  .card{background:var(--cream);padding:48px 38px;transition:background .4s var(--ease)}
+  .card:hover{background:var(--bg)}
+  .card .ic{width:48px;height:48px;display:flex;align-items:center;justify-content:center;border:1px solid var(--gold);border-radius:50%;margin-bottom:24px}
+  .card .ic svg{width:24px;height:24px;stroke:var(--gold);fill:none}
+  .card h3{font-size:26px;margin-bottom:12px;font-weight:500}
+  .card p{color:var(--muted);font-size:14.5px}
+  .card .num{font-family:var(--display);font-style:italic;font-size:16px;color:var(--blush-dk);margin-bottom:8px;display:block}
+
+  /* band — dark luxe */
+  .band{background:var(--char);color:var(--cream);text-align:center;position:relative;overflow:hidden}
+  .band::after{content:"";position:absolute;top:-120px;left:50%;transform:translateX(-50%);width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(232,196,192,.22),transparent 70%);pointer-events:none}
+  .band h2{font-size:clamp(34px,5vw,56px);margin-bottom:18px;color:var(--cream);font-weight:400;position:relative}
+  .band p{max-width:540px;margin:0 auto 34px;font-size:16px;opacity:.78;position:relative}
+  .band .btn-primary{background:var(--gold);border-color:var(--gold);color:var(--char);position:relative}
+  .band .btn-primary:hover{background:transparent;color:var(--gold)}
+
+  /* contact */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px}
+  .contact-info p{color:var(--muted);margin-bottom:26px;font-size:16px}
+  .contact-line{display:flex;gap:14px;align-items:center;margin-bottom:18px;font-weight:400;letter-spacing:.5px}
+  .contact-line svg{width:20px;height:20px;stroke:var(--gold);fill:none;flex:none}
+  .contact-line .soon{color:var(--muted);font-style:italic}
+  form{display:grid;gap:18px}
+  .field{display:grid;gap:7px}
+  .field label{font-weight:500;font-size:12px;letter-spacing:1px;text-transform:uppercase}
+  .field input,.field textarea{font-family:inherit;font-size:15px;font-weight:300;padding:14px 16px;border:1px solid rgba(26,23,24,.18);background:var(--cream);color:var(--ink)}
+  .field input:focus,.field textarea:focus{outline:none;border-color:var(--gold)}
+  .form-note{font-size:12px;color:var(--muted);letter-spacing:.5px}
+  #formMsg{display:none;padding:14px 16px;background:rgba(232,196,192,.3);color:var(--ink);font-weight:400}
+
+  /* footer */
+  footer{background:var(--char);color:rgba(253,250,248,.65);padding:60px 0 32px;text-align:center}
+  footer .logo{color:var(--cream);margin-bottom:14px}
+  .socials{display:flex;gap:18px;justify-content:center;margin:20px 0 28px}
+  .socials a{width:44px;height:44px;border-radius:50%;border:1px solid rgba(253,250,248,.25);display:flex;align-items:center;justify-content:center;transition:.3s}
+  .socials a:hover{border-color:var(--gold);color:var(--gold)}
+  .socials svg{width:18px;height:18px;stroke:currentColor;fill:none}
+  .foot-fine{font-size:12px;opacity:.5;margin-top:12px;letter-spacing:.5px}
+
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:860px){
+    .about-grid,.contact-grid{grid-template-columns:1fr;gap:48px}
+    .cards{grid-template-columns:1fr}
+    .nav-links{position:fixed;inset:0 0 0 auto;width:78%;max-width:320px;background:var(--cream);flex-direction:column;justify-content:center;gap:30px;transform:translateX(100%);transition:transform .35s var(--ease);box-shadow:-10px 0 40px rgba(0,0,0,.12)}
+    .nav-links.open{transform:none}
+    .nav-toggle{display:flex;z-index:60}
+    .nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .nav-toggle.open span:nth-child(2){opacity:0}
+    .nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    section{padding:72px 0}
+    .gleam{display:none}
+  }
+</style>
+</head>
+<body>
+<header>
+  <nav>
+    <a href="#top" class="logo">MUSE <span>The Beauty Society</span></a>
+    <div class="nav-links" id="menu">
+      <a href="#about">About</a>
+      <a href="#offerings">Services</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="btn btn-primary" style="padding:11px 26px">Book</a>
+    </div>
+    <button class="nav-toggle" id="toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<a id="top"></a>
+<section class="hero">
+  <span class="gleam"></span>
+  <div class="wrap hero-inner reveal">
+    <div class="eyebrow">Syracuse, New York</div>
+    <h1>Where beauty<br>meets <em>self-care</em>.</h1>
+    <p>MUSE The Beauty Society is an esthetics studio by Alexis M. Brown — a quiet, elevated space for skin, glow, and a moment that's entirely your own.</p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn btn-primary">Book a Visit</a>
+      <a href="#offerings" class="btn btn-ghost">View Services</a>
+    </div>
+  </div>
+  <div class="hero-deco"></div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="reveal">
+      <div class="eyebrow">The Studio</div>
+      <h2>An invitation to slow down.</h2>
+      <p>MUSE The Beauty Society was created by Alexis M. Brown to be more than a treatment room — it's a society of self-care. A place in Syracuse where every visit is unhurried, every detail considered, and every guest leaves feeling like the most refined version of themselves.</p>
+      <p>From results-driven skincare to a quiet moment of glow before a big day, our approach is personal, calm, and always tailored to you.</p>
+    </div>
+    <div class="about-card reveal"><span>Your glow, beautifully tended.</span></div>
+  </div>
+</section>
+
+<section class="offer" id="offerings">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Services</div>
+      <h2>Tailored to your skin.</h2>
+      <p>A considered menu of esthetics and skincare services, each personalized in studio. Reach out for current offerings and to plan your visit.</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal">
+        <span class="num">01</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M8.5 14c1 1.2 2.2 1.8 3.5 1.8s2.5-.6 3.5-1.8"/><circle cx="9" cy="10" r=".6" fill="currentColor"/><circle cx="15" cy="10" r=".6" fill="currentColor"/></svg></div>
+        <h3>Facials</h3>
+        <p>Customized facials designed around your skin's needs — cleansing, nourishing, and restoring a healthy, radiant balance.</p>
+      </div>
+      <div class="card reveal">
+        <span class="num">02</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2 2M16.4 16.4l2 2M18.4 5.6l-2 2M7.6 16.4l-2 2"/><circle cx="12" cy="12" r="3.5"/></svg></div>
+        <h3>Skincare Treatments</h3>
+        <p>Targeted treatments to address texture, tone, and clarity — thoughtfully selected to support your skin over time.</p>
+      </div>
+      <div class="card reveal">
+        <span class="num">03</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9c3-2.5 6-2.5 9 0M12 15c3-2.5 6-2.5 9 0"/><path d="M4 14c2.5 1 4.5 1 6 0M14 10c1.5-1 3.5-1 6 0"/></svg></div>
+        <h3>Brows &amp; Lashes</h3>
+        <p>Shaping, defining, and enhancing — refined brow and lash services that frame and elevate your natural features.</p>
+      </div>
+      <div class="card reveal">
+        <span class="num">04</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c2-9 6-14 10-15M5 19c5-1 8-4 9-9"/><circle cx="16.5" cy="5.5" r="2"/></svg></div>
+        <h3>Waxing</h3>
+        <p>Smooth, gentle waxing services performed with care, comfort, and an attention to detail that puts you at ease.</p>
+      </div>
+      <div class="card reveal">
+        <span class="num">05</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.2 5.5L20 9l-5 4 1.5 6L12 16l-4.5 3L9 13 4 9l5.8-1.5z"/></svg></div>
+        <h3>Glow &amp; Event Prep</h3>
+        <p>Looking ahead to a wedding, photo day, or celebration? We'll help your skin look its luminous best for the moment that matters.</p>
+      </div>
+      <div class="card reveal">
+        <span class="num">06</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.4-9.2-8.6A5 5 0 0 1 12 6a5 5 0 0 1 9.2 6.4C19 16.6 12 21 12 21z"/></svg></div>
+        <h3>Personalized Care</h3>
+        <p>Every guest is met where they are. Tell us your goals and we'll craft a service plan made entirely around you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap reveal">
+    <h2>Book your glow.</h2>
+    <p>Ready for a moment that's entirely your own? Reach out to plan your visit to the studio, and we'll find the time that suits you.</p>
+    <a href="#contact" class="btn btn-primary">Request an Appointment</a>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-info reveal">
+      <div class="eyebrow">Get in Touch</div>
+      <h2 style="font-size:clamp(32px,4.5vw,52px);margin-bottom:20px;font-weight:400">Begin your visit.</h2>
+      <p>Tell us a little about what you're looking for, and we'll be in touch to plan your appointment. The studio is based in Syracuse, New York.</p>
+      <div class="contact-line"><svg viewBox="0 0 24 24" stroke-width="1.6"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Syracuse, New York</div>
+      <!-- OWNER: add your phone and email below, then delete the "coming soon" notes -->
+      <div class="contact-line"><svg viewBox="0 0 24 24" stroke-width="1.6"><path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span class="soon">Phone — coming soon</span></div>
+      <div class="contact-line"><svg viewBox="0 0 24 24" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span class="soon">Email — coming soon</span></div>
+    </div>
+    <div class="reveal">
+      <!-- OWNER: connect this form to an email service (e.g. Formspree: action="https://formspree.io/f/XXXX" method="POST") to receive messages. -->
+      <form id="contactForm" onsubmit="return sendForm(event)">
+        <div class="field"><label for="n">Name</label><input id="n" name="name" required></div>
+        <div class="field"><label for="e">Email</label><input id="e" name="email" type="email" required></div>
+        <div class="field"><label for="m">What are you interested in?</label><textarea id="m" name="message" rows="5" placeholder="A facial, event prep, a service question…" required></textarea></div>
+        <button type="submit" class="btn btn-primary">Send Inquiry</button>
+        <p class="form-note">We'll reply by email to plan your visit.</p>
+        <div id="formMsg">Thank you. Your inquiry is ready to send once the form is connected.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="logo">MUSE <span style="color:var(--gold)">The Beauty Society</span></div>
+    <p>Esthetics &amp; skincare studio · Syracuse, NY</p>
+    <div class="socials">
+      <!-- OWNER: replace # with your Instagram / Facebook links -->
+      <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+      <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v6h4v-6h3l1-4h-4V8a1 1 0 0 1 1-1z"/></svg></a>
+    </div>
+    <p class="foot-fine">© <span id="yr"></span> MUSE The Beauty Society · Alexis M. Brown. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const t=document.getElementById('toggle'),m=document.getElementById('menu');
+  t.addEventListener('click',()=>{m.classList.toggle('open');t.classList.toggle('open')});
+  m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.classList.remove('open');t.classList.remove('open')}));
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  function sendForm(ev){ev.preventDefault();document.getElementById('formMsg').style.display='block';return false;}
+</script>
+</body>
+</html>

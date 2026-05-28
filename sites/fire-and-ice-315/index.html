@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fire &amp; Ice 315 | Food Truck — Bold Flavors &amp; Street Eats, Central NY</title>
+<meta name="description" content="Fire &amp; Ice 315 — a family-owned Central New York food truck serving bold flavors and street eats. Spiedies, loaded chicken phillies, tenders and more. Catch us around the 315.">
+<!--
+  OWNER SETUP — verified contact details are wired in (phone, email, Facebook, Instagram, StreetFoodFinder schedule).
+  Menu lists fan favorites; add full menu, prices, and your weekly schedule link as desired.
+  Connect the contact form to an email service if you want web messages in addition to calls/DMs.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --dark:#0f1620; --night:#16202c; --fire:#e63946; --ember:#ff6b35;
+    --ice:#2a9df4; --frost:#bfe3ff; --cream:#fdf6ec; --muted:#9aa7b4;
+    --head:'Oswald',Impact,sans-serif; --sans:'Inter',system-ui,sans-serif;
+    --max:1140px; --ease:cubic-bezier(.25,.1,.25,1);
+  }
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);color:var(--cream);background:var(--dark);line-height:1.65;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  h1,h2,h3{font-family:var(--head);font-weight:600;line-height:1.05;text-transform:uppercase;letter-spacing:.5px}
+  .label{font-family:var(--head);font-size:14px;font-weight:600;letter-spacing:3px;text-transform:uppercase;margin-bottom:14px}
+  .label.fire{color:var(--ember)} .label.ice{color:var(--ice)}
+  .btn{display:inline-block;padding:14px 30px;font-family:var(--head);font-size:15px;font-weight:600;letter-spacing:2px;text-transform:uppercase;border-radius:4px;transition:.3s var(--ease)}
+  .btn-fire{background:var(--fire);color:#fff;box-shadow:0 10px 26px rgba(230,57,70,.4)}
+  .btn-fire:hover{background:var(--ember);transform:translateY(-3px)}
+  .btn-ice{border:2px solid var(--ice);color:var(--ice)}
+  .btn-ice:hover{background:var(--ice);color:var(--dark)}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(15,22,32,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08)}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:var(--max);margin:0 auto}
+  .logo{font-family:var(--head);font-size:24px;font-weight:700;letter-spacing:1px}
+  .logo .f{color:var(--fire)} .logo .i{color:var(--ice)}
+  .nav-links{display:flex;gap:28px;align-items:center}
+  .nav-links a{font-family:var(--head);font-size:14px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase}
+  .nav-links a:hover{color:var(--ember)}
+  .nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer}
+  .nav-toggle span{width:26px;height:2px;background:var(--cream);transition:.3s}
+
+  .hero{position:relative;min-height:84vh;display:flex;align-items:center;overflow:hidden;
+    background:linear-gradient(115deg,var(--fire) 0%,#7d1a2a 38%,var(--night) 55%,#0c3a5e 78%,var(--ice) 130%)}
+  .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 12% 30%,rgba(255,107,53,.35),transparent 40%),radial-gradient(circle at 88% 78%,rgba(42,157,244,.35),transparent 42%)}
+  .hero-inner{position:relative;z-index:2;max-width:720px;padding:50px 0}
+  .hero h1{font-size:clamp(54px,11vw,128px);font-weight:700;letter-spacing:1px;text-shadow:0 6px 30px rgba(0,0,0,.4)}
+  .hero h1 .f{color:#fff} .hero h1 .amp{color:var(--cream)} .hero h1 .i{color:#fff}
+  .hero .tag{font-family:var(--head);font-size:clamp(18px,3vw,28px);letter-spacing:2px;margin:8px 0 22px;color:var(--cream)}
+  .hero p{font-size:18px;max-width:480px;color:rgba(253,246,236,.9);margin-bottom:32px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+
+  section{padding:90px 0}
+  .about{background:var(--night)}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  .about h2{font-size:clamp(32px,5vw,52px);margin-bottom:20px}
+  .about h2 span{color:var(--ember)}
+  .about p{color:var(--muted);margin-bottom:16px;font-size:16.5px}
+  .badge{display:inline-flex;align-items:center;gap:10px;background:rgba(255,107,53,.12);border:1px solid rgba(255,107,53,.4);color:var(--ember);padding:10px 18px;border-radius:40px;font-family:var(--head);letter-spacing:1.5px;font-size:14px;text-transform:uppercase}
+  .flame-card{aspect-ratio:1/1;border-radius:10px;background:linear-gradient(150deg,var(--fire),var(--ember) 45%,var(--ice));display:flex;align-items:center;justify-content:center;text-align:center;padding:36px;box-shadow:0 30px 60px rgba(0,0,0,.4)}
+  .flame-card span{font-family:var(--head);font-size:clamp(28px,4vw,42px);text-transform:uppercase;letter-spacing:1px;color:#fff;line-height:1.1}
+
+  .menu{background:var(--dark)}
+  .menu h2{font-size:clamp(32px,5vw,50px);text-align:center;margin-bottom:8px}
+  .menu .sub{text-align:center;color:var(--muted);margin-bottom:50px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .item{background:var(--night);border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:32px 26px;transition:.35s var(--ease)}
+  .item:hover{transform:translateY(-6px);border-color:var(--ember);box-shadow:0 20px 40px rgba(230,57,70,.18)}
+  .item .ic{width:48px;height:48px;margin-bottom:18px}
+  .item .ic svg{width:48px;height:48px;stroke:var(--ember);fill:none;stroke-width:1.6}
+  .item h3{font-size:22px;margin-bottom:10px}
+  .item p{color:var(--muted);font-size:15px}
+
+  .find{background:linear-gradient(120deg,var(--ice),#0c5fa0);text-align:center}
+  .find h2{font-size:clamp(30px,4.5vw,46px);margin-bottom:14px;color:#fff}
+  .find p{max-width:520px;margin:0 auto 28px;color:rgba(255,255,255,.92)}
+  .find .btn-fire{background:#fff;color:var(--ice)}
+  .find .btn-fire:hover{background:var(--cream)}
+
+  .contact{background:var(--night)}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+  .contact h2{font-size:clamp(30px,4.5vw,46px);margin-bottom:18px}
+  .contact-info p{color:var(--muted);margin-bottom:24px}
+  .cl{display:flex;gap:13px;align-items:center;margin-bottom:16px;font-weight:500}
+  .cl svg{width:22px;height:22px;stroke:var(--ember);fill:none;stroke-width:1.8;flex:none}
+  .cl a:hover{color:var(--ember)}
+  form{display:grid;gap:15px}
+  .field{display:grid;gap:6px}
+  .field label{font-family:var(--head);font-size:14px;letter-spacing:1px;text-transform:uppercase}
+  .field input,.field textarea{font-family:inherit;font-size:15px;padding:13px 15px;border:1px solid rgba(255,255,255,.18);background:var(--dark);color:var(--cream);border-radius:6px}
+  .field input:focus,.field textarea:focus{outline:none;border-color:var(--ice)}
+  #formMsg{display:none;padding:13px 15px;background:rgba(42,157,244,.18);color:var(--cream);font-weight:500;border-radius:6px}
+
+  footer{background:var(--dark);color:var(--muted);padding:54px 0 30px;text-align:center;border-top:1px solid rgba(255,255,255,.07)}
+  footer .logo{margin-bottom:14px}
+  .socials{display:flex;gap:16px;justify-content:center;margin:18px 0 24px}
+  .socials a{width:44px;height:44px;border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;border-radius:50%;transition:.3s}
+  .socials a:hover{background:var(--fire);border-color:var(--fire);color:#fff}
+  .socials svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.7}
+  .fine{font-size:12.5px;opacity:.6;margin-top:8px}
+
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:860px){
+    .about-grid,.contact-grid{grid-template-columns:1fr;gap:40px}
+    .grid{grid-template-columns:1fr}
+    section{padding:64px 0}
+    .nav-links{position:fixed;inset:0 0 0 auto;width:80%;max-width:320px;background:var(--night);flex-direction:column;justify-content:center;gap:28px;transform:translateX(100%);transition:transform .35s var(--ease)}
+    .nav-links.open{transform:none}
+    .nav-toggle{display:flex;z-index:60}
+    .nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .nav-toggle.open span:nth-child(2){opacity:0}
+    .nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  }
+</style>
+</head>
+<body>
+<header>
+  <nav>
+    <a href="#top" class="logo"><span class="f">FIRE</span> &amp; <span class="i">ICE</span> 315</a>
+    <div class="nav-links" id="menu">
+      <a href="#about">Our Story</a>
+      <a href="#menu">Menu</a>
+      <a href="#find">Find Us</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:+13159359484" class="btn btn-fire" style="padding:10px 20px">Call</a>
+    </div>
+    <button class="nav-toggle" id="toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<a id="top"></a>
+<section class="hero">
+  <div class="wrap hero-inner reveal">
+    <div class="label" style="color:var(--cream)">Central New York Food Truck</div>
+    <h1><span class="f">FIRE</span> <span class="amp">&amp;</span> <span class="i">ICE</span> 315</h1>
+    <div class="tag">Bold Flavors · Street Eats</div>
+    <p>A family-owned food truck rolling around the 315 with hot, fresh, made-to-order favorites. Hungry? Come find us.</p>
+    <div class="hero-cta">
+      <a href="#menu" class="btn btn-fire">See the Menu</a>
+      <a href="https://streetfoodfinder.com/FireAndIceFT" target="_blank" rel="noopener" class="btn btn-ice">Where We'll Be</a>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="reveal">
+      <span class="badge">Family Owned · 315</span>
+      <h2 style="margin-top:18px">Where <span>fire</span> meets flavor.</h2>
+      <p>Fire &amp; Ice 315 is a locally owned, family-run food truck built on one simple idea: bold, satisfying street food made fresh when you order it. No shortcuts, just good eats served with a smile.</p>
+      <p>From juicy spiedies to loaded handhelds, our menu brings the heat (and the cool) to events, lots, and gatherings all over Central New York. Follow along to see where we're parked next.</p>
+    </div>
+    <div class="flame-card reveal"><span>Hot off<br>the truck.</span></div>
+  </div>
+</section>
+
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="reveal">
+      <h2>Fan Favorites</h2>
+      <p class="sub">A taste of what we're known for — the menu changes, so check our socials for specials.</p>
+    </div>
+    <div class="grid">
+      <div class="item reveal">
+        <div class="ic"><svg viewBox="0 0 48 48"><path d="M10 28h28l-2 10H12z"/><path d="M14 28c0-6 4-10 10-10s10 4 10 10M24 12v6"/></svg></div>
+        <h3>Spiedies</h3>
+        <p>Marinated, grilled, and stacked — the CNY classic done right.</p>
+      </div>
+      <div class="item reveal">
+        <div class="ic"><svg viewBox="0 0 48 48"><path d="M8 20c0-5 4-8 16-8s16 3 16 8v2H8z"/><path d="M10 26h28v4a4 4 0 0 1-4 4H14a4 4 0 0 1-4-4z"/></svg></div>
+        <h3>Loaded Chicken Phillies</h3>
+        <p>Griddled chicken piled high with all the fixings on a toasted roll.</p>
+      </div>
+      <div class="item reveal">
+        <div class="ic"><svg viewBox="0 0 48 48"><path d="M16 10c8 0 14 5 14 12s-5 14-12 16c-6 2-10-2-9-7 1-4 5-5 5-10 0-6-2-9 2-11z"/></svg></div>
+        <h3>Sauced-Up Tenders</h3>
+        <p>Crispy chicken tenders tossed in your favorite house sauces.</p>
+      </div>
+      <div class="item reveal">
+        <div class="ic"><svg viewBox="0 0 48 48"><rect x="12" y="16" width="24" height="20" rx="3"/><path d="M16 16c0-4 3-6 8-6s8 2 8 6M20 24v6M28 24v6"/></svg></div>
+        <h3>Sides &amp; Street Eats</h3>
+        <p>The good stuff on the side to round out your order.</p>
+      </div>
+      <div class="item reveal">
+        <div class="ic"><svg viewBox="0 0 48 48"><path d="M24 8c4 6-2 8 0 13M18 12c2 4-1 5 0 8"/><path d="M14 24h20l-2 14H16z"/></svg></div>
+        <h3>Soul, With a Twist</h3>
+        <p>Comfort flavors with a little something unexpected mixed in.</p>
+      </div>
+      <div class="item reveal">
+        <div class="ic"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="14"/><path d="M24 14v10l7 4"/></svg></div>
+        <h3>Rotating Specials</h3>
+        <p>We switch it up — check Facebook &amp; Instagram for today's lineup.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="find" id="find">
+  <div class="wrap reveal">
+    <h2>Catch us around the 315</h2>
+    <p>Our schedule moves with us. See where the truck will be parked next on StreetFoodFinder, or book us for your next event.</p>
+    <a href="https://streetfoodfinder.com/FireAndIceFT" target="_blank" rel="noopener" class="btn btn-fire">View Our Schedule</a>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-info reveal">
+      <div class="label fire">Contact &amp; Catering</div>
+      <h2>Book the truck.</h2>
+      <p>Birthdays, work lots, festivals, and private events — let's bring Fire &amp; Ice 315 to you. Call, email, or message us on social.</p>
+      <div class="cl"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><a href="tel:+13159359484">(315) 935-9484</a></div>
+      <div class="cl"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:FireandIceFoodTruck315@gmail.com">FireandIceFoodTruck315@gmail.com</a></div>
+      <div class="cl"><svg viewBox="0 0 24 24"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Serving Cicero, Syracuse &amp; the greater 315</div>
+    </div>
+    <div class="reveal">
+      <!-- OWNER: optionally connect this form to Formspree/Netlify to receive web messages. -->
+      <form id="contactForm" onsubmit="return sendForm(event)">
+        <div class="field"><label for="n">Name</label><input id="n" name="name" required></div>
+        <div class="field"><label for="e">Email</label><input id="e" name="email" type="email" required></div>
+        <div class="field"><label for="m">Event details</label><textarea id="m" name="message" rows="5" placeholder="Date, location, headcount…" required></textarea></div>
+        <button type="submit" class="btn btn-fire">Request a Booking</button>
+        <div id="formMsg">Thanks! Your message is ready to send once the form is connected — or just give us a call.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="logo"><span class="f">FIRE</span> &amp; <span class="i">ICE</span> 315</div>
+    <p>Family-owned food truck · Central New York</p>
+    <div class="socials">
+      <a href="https://www.facebook.com/p/Fire-and-Ice-Food-Truck-61572570536656/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v6h4v-6h3l1-4h-4V8a1 1 0 0 1 1-1z"/></svg></a>
+      <a href="https://www.instagram.com/fireandicefoodtruck315/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+      <a href="https://streetfoodfinder.com/FireAndIceFT" target="_blank" rel="noopener" aria-label="Schedule"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg></a>
+    </div>
+    <p class="fine">© <span id="yr"></span> Fire &amp; Ice 315. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const t=document.getElementById('toggle'),m=document.getElementById('menu');
+  t.addEventListener('click',()=>{m.classList.toggle('open');t.classList.toggle('open')});
+  m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.classList.remove('open');t.classList.remove('open')}));
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  function sendForm(ev){ev.preventDefault();document.getElementById('formMsg').style.display='block';return false;}
+</script>
+</body>
+</html>

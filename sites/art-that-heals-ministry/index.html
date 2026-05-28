@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art That Heals Ministry | Healing Hearts Through Art &amp; Faith — Syracuse, NY</title>
+<meta name="description" content="Art That Heals Ministry, founded by Alice Denise Young — a faith-rooted, family-friendly ministry in Syracuse, New York offering kids art programs, creative workshops, and community events that heal hearts through art.">
+<!--
+  OWNER SETUP — replace the placeholders below when your details are ready:
+  • Phone, email, and social links (search "OWNER:" in this file)
+  • Connect the contact form to an email service (Formspree, Netlify Forms, etc.) — see the <form> tag
+  Real facts used: business name, owner/founder (Alice Denise Young), town (Syracuse, NY), category (faith-based ministry / kids art service).
+  Everything else is illustrative copy you can edit freely.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --bg:#fff7ef; --cream:#fffaf4; --coral:#ff7e67; --coral-dk:#f0654c;
+    --sky:#4aa3c7; --plum:#4a3550; --muted:#7a6a82; --gold:#e0a93b;
+    --serif:'Fraunces',Georgia,serif; --sans:'Nunito Sans',system-ui,sans-serif;
+    --max:1140px; --ease:cubic-bezier(.25,.1,.25,1);
+  }
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);color:var(--plum);background:var(--bg);line-height:1.7;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.15;letter-spacing:-.01em;color:var(--plum)}
+  .eyebrow{font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--coral);margin-bottom:14px}
+  .btn{display:inline-block;padding:14px 32px;border-radius:40px;font-weight:700;font-size:15px;transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+  .btn-primary{background:var(--coral);color:#fff;box-shadow:0 10px 24px rgba(255,126,103,.35)}
+  .btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 30px rgba(255,126,103,.45)}
+  .btn-ghost{border:1.5px solid var(--sky);color:var(--sky)}
+  .btn-ghost:hover{background:var(--sky);color:#fff}
+
+  /* header */
+  header{position:sticky;top:0;z-index:50;background:rgba(255,247,239,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(74,53,80,.08)}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;max-width:var(--max);margin:0 auto}
+  .logo{font-family:var(--serif);font-size:23px;font-weight:600;color:var(--plum);display:flex;align-items:center;gap:10px}
+  .logo .mark{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--coral),var(--sky));display:inline-block}
+  .logo span{color:var(--coral)}
+  .nav-links{display:flex;gap:30px;align-items:center}
+  .nav-links a{font-weight:600;font-size:15px;color:var(--plum);transition:color .25s}
+  .nav-links a:hover{color:var(--coral)}
+  .nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer}
+  .nav-toggle span{width:26px;height:2px;background:var(--plum);transition:.3s}
+
+  /* hero — soft watercolor wash */
+  .hero{position:relative;padding:110px 0 120px;overflow:hidden;background:
+    radial-gradient(ellipse 60% 50% at 75% 12%,rgba(255,126,103,.35),transparent 60%),
+    radial-gradient(ellipse 55% 50% at 12% 80%,rgba(74,163,199,.3),transparent 60%),
+    radial-gradient(circle at 50% 50%,rgba(224,169,59,.12),transparent 55%),var(--cream)}
+  .hero-inner{max-width:740px;position:relative;z-index:2}
+  .hero h1{font-size:clamp(40px,6.6vw,76px);margin:0 0 22px}
+  .hero h1 em{font-style:italic;color:var(--coral)}
+  .hero p{font-size:clamp(17px,2.2vw,20px);color:var(--muted);max-width:560px;margin-bottom:34px}
+  .hero-cta{display:flex;gap:16px;flex-wrap:wrap}
+  .wash{position:absolute;border-radius:50%;filter:blur(40px);opacity:.5;pointer-events:none}
+  .wash.w1{width:280px;height:280px;background:var(--coral);top:-60px;right:6%}
+  .wash.w2{width:220px;height:220px;background:var(--sky);bottom:-50px;right:24%}
+
+  section{padding:92px 0}
+  .section-head{max-width:640px;margin-bottom:54px}
+  .section-head h2{font-size:clamp(30px,4.5vw,46px);margin-bottom:14px}
+  .section-head p{color:var(--muted);font-size:17px}
+
+  /* about */
+  .about{background:var(--bg)}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+  .about-card{position:relative;border-radius:28px;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;color:#fff;font-family:var(--serif);font-style:italic;font-size:clamp(24px,3.6vw,36px);text-align:center;padding:40px;overflow:hidden;background:linear-gradient(150deg,var(--coral),var(--gold) 50%,var(--sky));box-shadow:0 24px 50px rgba(74,53,80,.18)}
+  .about-card::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.35),transparent 55%)}
+  .about-card span{position:relative;z-index:2}
+  .about p{color:var(--muted);margin-bottom:18px;font-size:17px}
+  .verse{border-left:3px solid var(--coral);padding-left:18px;font-family:var(--serif);font-style:italic;color:var(--plum);font-size:18px}
+
+  /* offerings */
+  .offer{background:linear-gradient(180deg,var(--cream),var(--bg))}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .card{background:#fff;border:1px solid rgba(74,53,80,.07);border-radius:22px;padding:36px 30px;transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+  .card:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(74,53,80,.12)}
+  .card .ic{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(255,126,103,.18),rgba(74,163,199,.18));margin-bottom:20px}
+  .card .ic svg{width:28px;height:28px;stroke:var(--coral);fill:none}
+  .card:nth-child(even) .ic svg{stroke:var(--sky)}
+  .card h3{font-size:22px;margin-bottom:10px}
+  .card p{color:var(--muted);font-size:15.5px}
+
+  /* values */
+  .values{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:56px;text-align:center}
+  .value{padding:8px}
+  .value .vic{width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;background:linear-gradient(135deg,var(--coral),var(--sky))}
+  .value .vic svg{width:24px;height:24px;stroke:#fff;fill:none}
+  .value h4{font-family:var(--serif);font-weight:500;font-size:19px;margin-bottom:6px}
+  .value p{color:var(--muted);font-size:14.5px}
+
+  /* band */
+  .band{background:linear-gradient(120deg,var(--coral),var(--sky));color:#fff;text-align:center}
+  .band h2{font-size:clamp(28px,4vw,42px);margin-bottom:16px;color:#fff}
+  .band p{max-width:580px;margin:0 auto 30px;font-size:17px;opacity:.94}
+  .band .btn-primary{background:#fff;color:var(--coral-dk);box-shadow:0 10px 24px rgba(0,0,0,.15)}
+
+  /* contact */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+  .contact-info p{color:var(--muted);margin-bottom:22px;font-size:17px}
+  .contact-line{display:flex;gap:14px;align-items:center;margin-bottom:16px;font-weight:600}
+  .contact-line svg{width:22px;height:22px;stroke:var(--coral);fill:none;flex:none}
+  .contact-line .soon{color:var(--muted);font-weight:400;font-style:italic}
+  form{display:grid;gap:16px}
+  .field{display:grid;gap:6px}
+  .field label{font-weight:700;font-size:14px}
+  .field input,.field textarea{font-family:inherit;font-size:15px;padding:13px 16px;border:1.5px solid rgba(74,53,80,.18);border-radius:12px;background:var(--cream);color:var(--plum)}
+  .field input:focus,.field textarea:focus{outline:none;border-color:var(--coral)}
+  .form-note{font-size:13px;color:var(--muted)}
+  #formMsg{display:none;padding:13px 16px;background:rgba(74,163,199,.18);border-radius:12px;color:var(--plum);font-weight:600}
+
+  /* footer */
+  footer{background:var(--plum);color:rgba(255,250,244,.75);padding:54px 0 30px;text-align:center}
+  footer .logo{color:#fff;justify-content:center;margin-bottom:14px}
+  .socials{display:flex;gap:18px;justify-content:center;margin:18px 0 26px}
+  .socials a{width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,250,244,.3);display:flex;align-items:center;justify-content:center;transition:.25s}
+  .socials a:hover{background:var(--coral);border-color:var(--coral)}
+  .socials svg{width:18px;height:18px;stroke:currentColor;fill:none}
+  .foot-fine{font-size:13px;opacity:.6;margin-top:10px}
+
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:860px){
+    .about-grid,.contact-grid{grid-template-columns:1fr;gap:40px}
+    .cards,.values{grid-template-columns:1fr}
+    .nav-links{position:fixed;inset:0 0 0 auto;width:78%;max-width:320px;background:var(--cream);flex-direction:column;justify-content:center;gap:28px;transform:translateX(100%);transition:transform .35s var(--ease);box-shadow:-10px 0 40px rgba(0,0,0,.12)}
+    .nav-links.open{transform:none}
+    .nav-toggle{display:flex;z-index:60}
+    .nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .nav-toggle.open span:nth-child(2){opacity:0}
+    .nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    section{padding:64px 0}
+  }
+</style>
+</head>
+<body>
+<header>
+  <nav>
+    <a href="#top" class="logo"><span class="mark"></span>Art That <span>Heals</span></a>
+    <div class="nav-links" id="menu">
+      <a href="#about">Our Mission</a>
+      <a href="#offerings">What We Offer</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="btn btn-primary" style="padding:10px 22px">Get Involved</a>
+    </div>
+    <button class="nav-toggle" id="toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<a id="top"></a>
+<section class="hero">
+  <div class="wrap hero-inner reveal">
+    <div class="eyebrow">Syracuse, New York</div>
+    <h1>Healing hearts through<br><em>art &amp; faith</em>.</h1>
+    <p>Art That Heals Ministry is a faith-rooted, family-friendly community founded by Alice Denise Young — where children and families find encouragement, creativity, and hope through making art together.</p>
+    <div class="hero-cta">
+      <a href="#offerings" class="btn btn-primary">Explore Our Programs</a>
+      <a href="#contact" class="btn btn-ghost">Get Involved</a>
+    </div>
+  </div>
+  <span class="wash w1"></span><span class="wash w2"></span>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="reveal">
+      <div class="eyebrow">Our Mission</div>
+      <h2>Creativity, care, and hope.</h2>
+      <p>Art That Heals Ministry began with a simple belief: that making art can comfort, connect, and uplift. Founded by Alice Denise Young in Syracuse, our ministry creates gentle, welcoming spaces where kids and families can express themselves and feel seen.</p>
+      <p>Rooted in faith and open to all, we pair creativity with kindness — offering programs and gatherings that nurture young hearts and build community, one project at a time.</p>
+      <p class="verse">"A joyful heart is good medicine." — A guiding spirit behind everything we do.</p>
+    </div>
+    <div class="about-card reveal"><span>Where creativity meets compassion.</span></div>
+  </div>
+</section>
+
+<section class="offer" id="offerings">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">What We Offer</div>
+      <h2>Ways we create together.</h2>
+      <p>Caring, hands-on programs and gatherings designed to encourage children, families, and the wider community.</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4a8 8 0 1 0 1.5 15.9c.8-.2 1-1 .6-1.7-.4-.7-.1-1.5.7-1.6l1.2-.1A4 4 0 0 0 20 12c0-4.4-3.6-8-8-8z"/><circle cx="8" cy="11" r="1"/><circle cx="11" cy="8" r="1"/><circle cx="15" cy="9" r="1"/></svg></div>
+        <h3>Kids Art Programs</h3>
+        <p>Friendly, hands-on art sessions where children can paint, draw, and create in a safe and encouraging space.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 7v6c0 5 3.5 7.5 8 8.5 4.5-1 8-3.5 8-8.5V7l-8-4z"/><path d="M12 8v6M9 11h6"/></svg></div>
+        <h3>Faith-Based Workshops</h3>
+        <p>Creative workshops that weave together art and faith — gentle, uplifting, and open to families of all ages.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9.5" r="2.3"/><path d="M3 19c0-3 2.7-5 6-5s6 2 6 5M15 14c2.4 0 5 1.5 5 4.5"/></svg></div>
+        <h3>Community Events</h3>
+        <p>Gatherings that bring neighbors together — celebrations, creative days, and moments of connection across our community.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.4-9.2-8.6A5 5 0 0 1 12 6a5 5 0 0 1 9.2 6.4C19 16.6 12 21 12 21z"/></svg></div>
+        <h3>Mentoring Through Art</h3>
+        <p>Caring one-to-one and small-group encouragement, using creativity as a way to listen, build confidence, and offer hope.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/><circle cx="12" cy="12" r="9"/></svg></div>
+        <h3>Volunteer &amp; Partner</h3>
+        <p>Lend your time, talents, or support. We welcome volunteers, partners, and friends who want to help hearts heal through art.</p>
+      </div>
+    </div>
+    <div class="values reveal">
+      <div class="value">
+        <div class="vic"><svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.4-9.2-8.6A5 5 0 0 1 12 6a5 5 0 0 1 9.2 6.4C19 16.6 12 21 12 21z"/></svg></div>
+        <h4>Led with love</h4>
+        <p>Every program begins with kindness — meeting each child and family right where they are.</p>
+      </div>
+      <div class="value">
+        <div class="vic"><svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 13s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg></div>
+        <h4>Open to all</h4>
+        <p>A welcoming, family-friendly space where everyone belongs and every voice is valued.</p>
+      </div>
+      <div class="value">
+        <div class="vic"><svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg></div>
+        <h4>Rooted in hope</h4>
+        <p>We believe creativity carries light — and that a hopeful heart can change a whole day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap reveal">
+    <h2>Get involved.</h2>
+    <p>Whether you'd like to bring a child to a program, volunteer your time, or partner with our ministry, we'd love to hear from you. Every helping hand makes a difference.</p>
+    <a href="#contact" class="btn btn-primary">Reach Out Today</a>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-info reveal">
+      <div class="eyebrow">Connect With Us</div>
+      <h2 style="font-size:clamp(28px,4vw,42px);margin-bottom:18px">We'd love to hear from you.</h2>
+      <p>Questions about our programs, ways to get involved, or how we can serve your family — send a note and we'll warmly get back to you. Serving Syracuse and the surrounding community.</p>
+      <div class="contact-line"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Syracuse, New York</div>
+      <!-- OWNER: add your phone and email below, then delete the "coming soon" notes -->
+      <div class="contact-line"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span class="soon">Phone — coming soon</span></div>
+      <div class="contact-line"><svg viewBox="0 0 24 24" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span class="soon">Email — coming soon</span></div>
+    </div>
+    <div class="reveal">
+      <!-- OWNER: connect this form to an email service (e.g. Formspree: action="https://formspree.io/f/XXXX" method="POST") to receive messages. -->
+      <form id="contactForm" onsubmit="return sendForm(event)">
+        <div class="field"><label for="n">Name</label><input id="n" name="name" required></div>
+        <div class="field"><label for="e">Email</label><input id="e" name="email" type="email" required></div>
+        <div class="field"><label for="m">How can we help?</label><textarea id="m" name="message" rows="5" placeholder="A program, volunteering, a partnership, a question…" required></textarea></div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+        <p class="form-note">We'll reply by email as soon as we're able.</p>
+        <div id="formMsg">Thank you! Your message is ready to send once the form is connected.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="logo"><span class="mark"></span>Art That <span style="color:var(--coral)">Heals</span></div>
+    <p>Healing hearts through art &amp; faith · Syracuse, NY</p>
+    <div class="socials">
+      <!-- OWNER: replace # with your Instagram / Facebook links -->
+      <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+      <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v6h4v-6h3l1-4h-4V8a1 1 0 0 1 1-1z"/></svg></a>
+    </div>
+    <p class="foot-fine">© <span id="yr"></span> Art That Heals Ministry · Alice Denise Young. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const t=document.getElementById('toggle'),m=document.getElementById('menu');
+  t.addEventListener('click',()=>{m.classList.toggle('open');t.classList.toggle('open')});
+  m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.classList.remove('open');t.classList.remove('open')}));
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  function sendForm(ev){ev.preventDefault();document.getElementById('formMsg').style.display='block';return false;}
+</script>
+</body>
+</html>
