@@ -129,7 +129,7 @@
 <header>
   <nav>
     <a href="#top" class="logo"><span class="f">FIRE</span> &amp; <span class="i">ICE</span> 315</a>
-    <div class="nav-links" id="menu">
+    <div class="nav-links" id="navMenu">
       <a href="#about">Our Story</a>
       <a href="#menu">Menu</a>
       <a href="#find">Find Us</a>
@@ -277,7 +277,7 @@
 </footer>
 
 <script>
-  const t=document.getElementById('toggle'),m=document.getElementById('menu');
+  const t=document.getElementById('toggle'),m=document.getElementById('navMenu');
   t.addEventListener('click',()=>{m.classList.toggle('open');t.classList.toggle('open')});
   m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.classList.remove('open');t.classList.remove('open')}));
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
