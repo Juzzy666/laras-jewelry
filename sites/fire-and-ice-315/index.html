@@ -11,7 +11,7 @@
     (relative path the site uses: img/truck.jpg). Until it's added, the About card gracefully falls back to the fire/ice gradient.
   Tagline "Sizzling Bites & Cool Delights" and the catering categories below are sourced from the truck wrap.
   Domain FireandIceFoodTruck315.com is also shown on the truck — linked in the contact section.
-  Full menu and prices live on StreetFoodFinder (linked from the menu section). Update the on-page menu copy if you want specific items/prices here.
+  Full menu (Mains / Sides / Drinks) with current prices is embedded from StreetFoodFinder — keep it in sync there.
 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -71,14 +71,15 @@
 
   .menu{background:var(--dark)}
   .menu h2{font-size:clamp(32px,5vw,50px);text-align:center;margin-bottom:8px}
-  .menu .sub{text-align:center;color:var(--muted);margin-bottom:50px}
-  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  .item{background:var(--night);border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:32px 26px;transition:.35s var(--ease)}
-  .item:hover{transform:translateY(-6px);border-color:var(--ember);box-shadow:0 20px 40px rgba(230,57,70,.18)}
-  .item .ic{width:48px;height:48px;margin-bottom:18px}
-  .item .ic svg{width:48px;height:48px;stroke:var(--ember);fill:none;stroke-width:1.6}
-  .item h3{font-size:22px;margin-bottom:10px}
-  .item p{color:var(--muted);font-size:15px}
+  .menu .sub{text-align:center;color:var(--muted);margin:0 auto 50px;max-width:680px;font-size:16px}
+  .menu-group{margin-bottom:48px}
+  .menu-group-title{font-family:var(--head);font-size:22px;letter-spacing:3px;color:var(--ember);margin-bottom:18px;border-bottom:2px solid rgba(255,107,53,.3);padding-bottom:8px;text-transform:uppercase}
+  .menu-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+  .m-row{display:flex;justify-content:space-between;align-items:flex-start;padding:16px 18px;background:var(--night);border:1px solid rgba(255,255,255,.07);border-radius:8px;transition:.25s var(--ease);gap:14px}
+  .m-row:hover{border-color:var(--ember);transform:translateY(-2px)}
+  .m-info h4{font-family:var(--head);font-size:17px;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;color:var(--cream);font-weight:600}
+  .m-info p{font-size:13px;color:var(--muted);line-height:1.4;margin:0}
+  .m-price{font-family:var(--head);font-size:17px;font-weight:600;color:var(--ember);flex:none;letter-spacing:.5px}
 
   .find{background:linear-gradient(120deg,var(--ice),#0c5fa0);text-align:center}
   .find h2{font-size:clamp(30px,4.5vw,46px);margin-bottom:14px;color:#fff}
@@ -113,7 +114,7 @@
 
   @media(max-width:860px){
     .about-grid,.contact-grid{grid-template-columns:1fr;gap:40px}
-    .grid{grid-template-columns:1fr}
+    .grid,.menu-list{grid-template-columns:1fr}
     section{padding:64px 0}
     .nav-links{position:fixed;inset:0 0 0 auto;width:80%;max-width:320px;background:var(--night);flex-direction:column;justify-content:center;gap:28px;transform:translateX(100%);transition:transform .35s var(--ease)}
     .nav-links.open{transform:none}
@@ -169,43 +170,51 @@
   <div class="wrap">
     <div class="reveal">
       <h2>Sizzling Bites &amp; Cool Delights</h2>
-      <p class="sub">A taste of what we're known for — the menu changes, so check our socials for daily specials.</p>
+      <p class="sub">Craving bold flavor and sizzling street eats? Fire &amp; Ice rolls in hot with a menu that's anything but ordinary — juicy spiedies, loaded chicken phillies, tenders tossed in your favorite sauces, and more.</p>
     </div>
-    <div class="grid">
-      <div class="item reveal">
-        <div class="ic"><svg viewBox="0 0 48 48"><path d="M10 28h28l-2 10H12z"/><path d="M14 28c0-6 4-10 10-10s10 4 10 10M24 12v6"/></svg></div>
-        <h3>Spiedies</h3>
-        <p>Marinated, grilled, and stacked — the CNY classic done right.</p>
-      </div>
-      <div class="item reveal">
-        <div class="ic"><svg viewBox="0 0 48 48"><path d="M8 20c0-5 4-8 16-8s16 3 16 8v2H8z"/><path d="M10 26h28v4a4 4 0 0 1-4 4H14a4 4 0 0 1-4-4z"/></svg></div>
-        <h3>Loaded Chicken Phillies</h3>
-        <p>Griddled chicken piled high with all the fixings on a toasted roll.</p>
-      </div>
-      <div class="item reveal">
-        <div class="ic"><svg viewBox="0 0 48 48"><path d="M16 10c8 0 14 5 14 12s-5 14-12 16c-6 2-10-2-9-7 1-4 5-5 5-10 0-6-2-9 2-11z"/></svg></div>
-        <h3>Sauced-Up Tenders</h3>
-        <p>Crispy chicken tenders tossed in your favorite house sauces.</p>
-      </div>
-      <div class="item reveal">
-        <div class="ic"><svg viewBox="0 0 48 48"><rect x="12" y="16" width="24" height="20" rx="3"/><path d="M16 16c0-4 3-6 8-6s8 2 8 6M20 24v6M28 24v6"/></svg></div>
-        <h3>Sides &amp; Street Eats</h3>
-        <p>The good stuff on the side to round out your order.</p>
-      </div>
-      <div class="item reveal">
-        <div class="ic"><svg viewBox="0 0 48 48"><path d="M24 8c4 6-2 8 0 13M18 12c2 4-1 5 0 8"/><path d="M14 24h20l-2 14H16z"/></svg></div>
-        <h3>Soul, With a Twist</h3>
-        <p>Comfort flavors with a little something unexpected mixed in.</p>
-      </div>
-      <div class="item reveal">
-        <div class="ic"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="14"/><path d="M24 14v10l7 4"/></svg></div>
-        <h3>Rotating Specials</h3>
-        <p>We switch it up — check Facebook &amp; Instagram for today's lineup.</p>
+
+    <div class="menu-group reveal">
+      <h3 class="menu-group-title">Mains</h3>
+      <div class="menu-list">
+        <div class="m-row"><div class="m-info"><h4>Chicken Spiedies</h4><p>Marinated chicken grilled and served on a soft roll.</p></div><span class="m-price">$11.00</span></div>
+        <div class="m-row"><div class="m-info"><h4>Chicken Tenders</h4><p>Golden brown tenders with your choice of sauce.</p></div><span class="m-price">$9.00</span></div>
+        <div class="m-row"><div class="m-info"><h4>Chicken Philly</h4><p>With sauteed peppers and onions.</p></div><span class="m-price">$12.50</span></div>
+        <div class="m-row"><div class="m-info"><h4>Hot Dog</h4><p>Hoffman Hot Dogs — a Central New York favorite since 1879.</p></div><span class="m-price">$6.00</span></div>
+        <div class="m-row"><div class="m-info"><h4>Hamburger</h4><p>Angus beef.</p></div><span class="m-price">$8.00</span></div>
+        <div class="m-row"><div class="m-info"><h4>Cheeseburger</h4><p>Angus beef, American cheese.</p></div><span class="m-price">$9.00</span></div>
+        <div class="m-row"><div class="m-info"><h4>Coney Hot Dog</h4><p>Hoffman Hot Dogs — a Central New York favorite since 1879.</p></div><span class="m-price">$6.00</span></div>
+        <div class="m-row"><div class="m-info"><h4>Whiskey Bacon Burger</h4><p>Angus beef patty on a brioche bun with bacon, cheese, and Sweet Baby Ray's Kickin' Bourbon.</p></div><span class="m-price">$10.00</span></div>
+        <div class="m-row"><div class="m-info"><h4>Italian Sausage Sandwich</h4><p>Basillo Buda Italian Sausage with sauteed peppers and onions on a fresh roll.</p></div><span class="m-price">$10.00</span></div>
       </div>
     </div>
-    <div style="text-align:center;margin-top:42px" class="reveal">
-      <a href="https://streetfoodfinder.com/FireAndIceFT?tab=menu" target="_blank" rel="noopener" class="btn btn-fire">View Full Menu &amp; Prices</a>
+
+    <div class="menu-group reveal">
+      <h3 class="menu-group-title">Sides</h3>
+      <div class="menu-list">
+        <div class="m-row"><div class="m-info"><h4>Pizza Logs</h4><p>With marinara sauce.</p></div><span class="m-price">$7.00</span></div>
+        <div class="m-row"><div class="m-info"><h4>Mac Salad</h4><p>A creamy blend of elbow macaroni, crisp vegetables, and a tangy mayo-based dressing.</p></div><span class="m-price">$4.25</span></div>
+        <div class="m-row"><div class="m-info"><h4>Potato Salad</h4><p>Tender red potatoes tossed in a creamy mayonnaise dressing with crunchy celery and onions.</p></div><span class="m-price">$4.25</span></div>
+        <div class="m-row"><div class="m-info"><h4>French Fries</h4><p>Golden, crispy fries — perfectly seasoned.</p></div><span class="m-price">$6.00</span></div>
+        <div class="m-row"><div class="m-info"><h4>Onion Rings</h4><p>Dipped in a seasoned batter and fried to crispy, golden perfection.</p></div><span class="m-price">$6.00</span></div>
+        <div class="m-row"><div class="m-info"><h4>Chips</h4><p>Frito-Lay products.</p></div><span class="m-price">$1.50</span></div>
+        <div class="m-row"><div class="m-info"><h4>Pasta Salad</h4><p>Al dente pasta tossed with crisp seasonal vegetables, cherry tomatoes, and black olives.</p></div><span class="m-price">$4.25</span></div>
+      </div>
     </div>
+
+    <div class="menu-group reveal">
+      <h3 class="menu-group-title">Drinks</h3>
+      <div class="menu-list">
+        <div class="m-row"><div class="m-info"><h4>Water</h4><p>12 oz. bottle.</p></div><span class="m-price">$2.00</span></div>
+        <div class="m-row"><div class="m-info"><h4>Celsius Energy Drink</h4><p>No sugar, no aspartame, no high-fructose corn syrup, and no artificial colors.</p></div><span class="m-price">$4.00</span></div>
+        <div class="m-row"><div class="m-info"><h4>Soda</h4><p>12 oz. cans.</p></div><span class="m-price">$2.00</span></div>
+        <div class="m-row"><div class="m-info"><h4>Arnold Palmer</h4><p>Iced tea and lemonade blend.</p></div><span class="m-price">$2.00</span></div>
+        <div class="m-row"><div class="m-info"><h4>Hot Coffee</h4><p>From Arabica beans.</p></div><span class="m-price">$2.00</span></div>
+        <div class="m-row"><div class="m-info"><h4>Tropicana Orange Juice</h4><p>Tropicana Pure Premium.</p></div><span class="m-price">$3.00</span></div>
+        <div class="m-row"><div class="m-info"><h4>Hot Cocoa</h4><p>Creamy hot cocoa.</p></div><span class="m-price">$2.00</span></div>
+      </div>
+    </div>
+
+    <p style="text-align:center;font-size:13px;opacity:.55;margin-top:18px">Menu and prices via StreetFoodFinder · subject to change.</p>
   </div>
 </section>
 
