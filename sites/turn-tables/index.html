@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Turn Tables | Furniture Restoration &amp; Refinishing Studio — Auburn, NY</title>
+<meta name="description" content="Turn Tables by Cynthia Wilder — a furniture restoration and refinishing studio in Auburn, New York. Restored pieces, custom painted &amp; restyled furniture, one-of-a-kind finds, and small commissions. Old tables, new stories.">
+<!--
+  OWNER SETUP — replace the placeholders below when your details are ready:
+  • IMPORTANT — BUSINESS CATEGORY NOT SPECIFIED: The original filing did not state a category for "Turn Tables."
+    This site assumes a FURNITURE RESTORATION / REFINISHING & restyled home furnishings studio as the most
+    natural reading of the name. Please CONFIRM this is correct, or let us know the real focus so we can
+    adjust the copy, services, and SEO to match (e.g. if it's actually a DJ/vinyl business, café, etc.).
+  • Phone, email, and social links (search "OWNER:" in this file)
+  • Connect the contact form to an email service (Formspree, Netlify Forms, etc.) — see the <form> tag
+  Real facts used: business name, owner (Cynthia Wilder), town (Auburn, NY). Category is ASSUMED — see note above.
+  Everything else is illustrative copy you can edit freely.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --walnut:#6b4a2b; --walnut-dk:#523619; --cream:#f4ece0; --cream-2:#fbf6ee;
+    --sage:#8a9a7b; --sage-dk:#6f7e61; --brass:#b08d57; --brass-dk:#977637;
+    --ink:#3a2c1c; --muted:#7e6f5d; --line:rgba(58,44,28,.12);
+    --serif:'Fraunces',Georgia,serif; --sans:'Nunito Sans',system-ui,sans-serif;
+    --max:1120px; --ease:cubic-bezier(.25,.1,.25,1);
+  }
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.7;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.1;letter-spacing:-.01em}
+  .eyebrow{font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--brass-dk);margin-bottom:14px}
+  .btn{display:inline-block;padding:14px 30px;border-radius:6px;font-weight:700;font-size:15px;transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+  .btn-primary{background:var(--walnut);color:var(--cream-2);box-shadow:0 10px 24px rgba(107,74,43,.3)}
+  .btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 30px rgba(107,74,43,.4)}
+  .btn-ghost{border:1.5px solid var(--walnut);color:var(--walnut)}
+  .btn-ghost:hover{background:var(--walnut);color:var(--cream-2)}
+
+  /* header */
+  header{position:sticky;top:0;z-index:50;background:rgba(244,236,224,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;max-width:var(--max);margin:0 auto}
+  .logo{font-family:var(--serif);font-size:25px;font-weight:600;color:var(--ink);display:flex;align-items:center;gap:9px}
+  .logo svg{width:28px;height:28px}
+  .logo span{font-style:italic;color:var(--brass-dk)}
+  .nav-links{display:flex;gap:30px;align-items:center}
+  .nav-links a{font-weight:600;font-size:15px;color:var(--ink);transition:color .25s}
+  .nav-links a:hover{color:var(--brass-dk)}
+  .nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer}
+  .nav-toggle span{width:26px;height:2px;background:var(--ink);transition:.3s}
+
+  /* hero — editorial, off-center */
+  .hero{position:relative;padding:110px 0 120px;overflow:hidden;background:
+    radial-gradient(circle at 85% 15%,rgba(176,141,87,.2),transparent 50%),
+    radial-gradient(circle at 5% 95%,rgba(138,154,123,.18),transparent 48%),var(--cream-2)}
+  .hero-inner{max-width:760px}
+  .hero .kicker{font-style:italic;font-family:var(--serif);font-size:20px;color:var(--brass-dk);margin-bottom:10px}
+  .hero h1{font-size:clamp(44px,8vw,88px);margin:0 0 22px}
+  .hero h1 em{font-style:italic;color:var(--walnut)}
+  .hero p{font-size:clamp(17px,2.2vw,20px);color:var(--muted);max-width:540px;margin-bottom:34px}
+  .hero-cta{display:flex;gap:16px;flex-wrap:wrap}
+  .hero-rule{display:flex;align-items:center;gap:16px;margin-top:44px;max-width:540px}
+  .hero-rule .ln{flex:1;height:1px;background:var(--line)}
+  .hero-rule span{font-style:italic;font-family:var(--serif);color:var(--muted);font-size:16px}
+
+  section{padding:96px 0}
+  .section-head{max-width:620px;margin-bottom:54px}
+  .section-head h2{font-size:clamp(30px,4.6vw,48px);margin-bottom:14px}
+  .section-head p{color:var(--muted);font-size:17px}
+
+  /* about — overlapping cards */
+  .about{background:var(--cream)}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+  .about p{color:var(--muted);margin-bottom:18px;font-size:17px}
+  .about-stack{position:relative;aspect-ratio:1/1}
+  .about-stack .a1{position:absolute;inset:0 30% 24% 0;background:linear-gradient(150deg,var(--walnut),var(--walnut-dk));border-radius:18px;box-shadow:0 24px 50px rgba(58,44,28,.25)}
+  .about-stack .a2{position:absolute;inset:30% 0 0 32%;background:var(--sage);border-radius:18px;box-shadow:0 24px 50px rgba(58,44,28,.22);display:flex;align-items:center;justify-content:center;text-align:center;padding:24px}
+  .about-stack .a2 svg{width:70px;height:70px;stroke:var(--cream-2);fill:none}
+  .about-stack .a1 .tag{position:absolute;left:22px;bottom:20px;color:var(--cream-2);font-family:var(--serif);font-style:italic;font-size:22px;line-height:1.2;max-width:75%}
+
+  /* offerings — asymmetric grid */
+  .offer{background:var(--cream-2)}
+  .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+  .card{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:36px 32px;transition:transform .35s var(--ease),box-shadow .35s var(--ease);position:relative}
+  .card:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(58,44,28,.13)}
+  .card .ic{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(176,141,87,.16);margin-bottom:20px}
+  .card .ic svg{width:30px;height:30px;stroke:var(--brass-dk);fill:none}
+  .card h3{font-size:24px;margin-bottom:10px}
+  .card p{color:var(--muted);font-size:15.5px}
+  .card .no{position:absolute;top:28px;right:32px;font-family:var(--serif);font-style:italic;font-size:18px;color:var(--line)}
+
+  /* band */
+  .band{background:linear-gradient(135deg,var(--walnut),var(--walnut-dk));color:var(--cream-2);text-align:center;position:relative;overflow:hidden}
+  .band::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 36px,rgba(255,255,255,.03) 36px 38px)}
+  .band .wrap{position:relative}
+  .band h2{font-size:clamp(30px,4.6vw,52px);margin-bottom:16px;color:var(--cream-2);font-style:italic}
+  .band p{max-width:560px;margin:0 auto 30px;font-size:17px;opacity:.9}
+  .band .btn-primary{background:var(--brass);color:var(--walnut-dk)}
+  .band .btn-primary:hover{box-shadow:0 14px 30px rgba(0,0,0,.28)}
+
+  /* contact */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+  .contact-info p{color:var(--muted);margin-bottom:22px;font-size:17px}
+  .contact-line{display:flex;gap:14px;align-items:center;margin-bottom:16px;font-weight:700}
+  .contact-line svg{width:22px;height:22px;stroke:var(--brass-dk);flex:none;fill:none}
+  .contact-line .soon{color:var(--muted);font-weight:400;font-style:italic}
+  form{display:grid;gap:16px}
+  .field{display:grid;gap:6px}
+  .field label{font-weight:700;font-size:14px}
+  .field input,.field textarea{font-family:inherit;font-size:15px;padding:13px 16px;border:1.5px solid var(--line);border-radius:10px;background:var(--cream-2);color:var(--ink)}
+  .field input:focus,.field textarea:focus{outline:none;border-color:var(--brass)}
+  .form-note{font-size:13px;color:var(--muted)}
+  #formMsg{display:none;padding:13px 16px;background:rgba(138,154,123,.2);border-radius:10px;color:var(--ink);font-weight:600}
+
+  /* footer */
+  footer{background:var(--walnut-dk);color:rgba(244,236,224,.78);padding:54px 0 30px;text-align:center}
+  footer .logo{color:var(--cream-2);justify-content:center;margin-bottom:14px}
+  footer .logo span{color:var(--brass)}
+  .socials{display:flex;gap:18px;justify-content:center;margin:18px 0 26px}
+  .socials a{width:42px;height:42px;border-radius:50%;border:1px solid rgba(244,236,224,.28);display:flex;align-items:center;justify-content:center;transition:.25s}
+  .socials a:hover{background:var(--brass);border-color:var(--brass);color:var(--walnut-dk)}
+  .socials svg{width:18px;height:18px;stroke:currentColor;fill:none}
+  .foot-fine{font-size:13px;opacity:.65;margin-top:10px}
+
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:860px){
+    .about-grid,.contact-grid{grid-template-columns:1fr;gap:48px}
+    .cards{grid-template-columns:1fr}
+    .about-stack{aspect-ratio:auto;height:360px}
+    .nav-links{position:fixed;inset:0 0 0 auto;width:78%;max-width:320px;background:var(--cream-2);flex-direction:column;justify-content:center;gap:28px;transform:translateX(100%);transition:transform .35s var(--ease);box-shadow:-10px 0 40px rgba(0,0,0,.12)}
+    .nav-links.open{transform:none}
+    .nav-toggle{display:flex;z-index:60}
+    .nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .nav-toggle.open span:nth-child(2){opacity:0}
+    .nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    section{padding:64px 0}
+  }
+</style>
+</head>
+<body>
+<header>
+  <nav>
+    <a href="#top" class="logo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#977637" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h18l-1 3H4z"/><path d="M5 12v8M19 12v8M5 16h14"/><path d="M6 9V6h12v3"/></svg>
+      Turn <span>Tables</span>
+    </a>
+    <div class="nav-links" id="menu">
+      <a href="#about">About</a>
+      <a href="#offerings">The Work</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="btn btn-primary" style="padding:10px 22px">Get in Touch</a>
+    </div>
+    <button class="nav-toggle" id="toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<a id="top"></a>
+<section class="hero">
+  <div class="wrap hero-inner reveal">
+    <div class="kicker">Auburn, New York</div>
+    <div class="eyebrow">Furniture Restoration Studio</div>
+    <h1>Old tables,<br><em>new stories</em>.</h1>
+    <p>Turn Tables is the workshop of Cynthia Wilder — where tired, forgotten furniture is stripped, refinished, and restyled into pieces with another lifetime left in them.</p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn btn-primary">Start a Project</a>
+      <a href="#offerings" class="btn btn-ghost">See the Work</a>
+    </div>
+    <div class="hero-rule"><span>Refinished by hand</span><span class="ln"></span><span>One piece at a time</span></div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="reveal">
+      <div class="eyebrow">In the Workshop</div>
+      <h2>Good bones deserve a second life.</h2>
+      <p>Turn Tables is a small furniture restoration and refinishing studio in Auburn, New York, run by Cynthia Wilder. Every piece that comes through the shop gets the same patient attention — stripped back, repaired, and finished by hand.</p>
+      <p>Some pieces are brought back to their original character; others are reimagined with new color and style. Either way, the goal is the same: take something well-made and worn, and give it a story worth keeping.</p>
+    </div>
+    <div class="about-stack reveal">
+      <div class="a1"><div class="tag">Stripped, sanded,<br>and brought back to life.</div></div>
+      <div class="a2"><svg viewBox="0 0 24 24" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l4-4"/><path d="M15 5l4 4-8 8-4-4z"/><path d="M14 6l4 4"/><path d="M18 3l3 3-2 2-3-3z"/></svg></div>
+    </div>
+  </div>
+</section>
+
+<section class="offer" id="offerings">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">The Work</div>
+      <h2>What happens at the bench.</h2>
+      <p>From faithful restorations to bold restyles — and the one-of-a-kind finds in between.</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal">
+        <div class="no">01</div>
+        <div class="ic"><svg viewBox="0 0 24 24" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l3-3"/><path d="M14 6l4 4-9 9-4-4z"/><path d="M13 7l4 4"/><circle cx="18.5" cy="5.5" r="2"/></svg></div>
+        <h3>Refinishing &amp; Restoration</h3>
+        <p>Stripping, sanding, repairing, and refinishing solid wood furniture to honor the craftsmanship that's already there.</p>
+      </div>
+      <div class="card reveal">
+        <div class="no">02</div>
+        <div class="ic"><svg viewBox="0 0 24 24" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 0 18c1.5 0 2-1 1.5-2s-.5-2 1-2H18a3 3 0 0 0 3-3c0-5-4-9-9-9z"/><circle cx="7.5" cy="11" r="1"/><circle cx="12" cy="7.5" r="1"/><circle cx="16.5" cy="11" r="1"/></svg></div>
+        <h3>Painted &amp; Restyled Pieces</h3>
+        <p>Fresh color, new hardware, and a thoughtful restyle to turn a dated piece into something that fits your space today.</p>
+      </div>
+      <div class="card reveal">
+        <div class="no">03</div>
+        <div class="ic"><svg viewBox="0 0 24 24" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.4 5 5.6.5-4.2 3.7 1.3 5.5L12 20l-5.1 2.7 1.3-5.5L4 13.5 9.6 13z"/></svg></div>
+        <h3>One-of-a-Kind Finds</h3>
+        <p>A rotating collection of restored pieces ready for a new home — each finished and waiting for the right room.</p>
+      </div>
+      <div class="card reveal">
+        <div class="no">04</div>
+        <div class="ic"><svg viewBox="0 0 24 24" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21v-9h14v9"/><path d="M8 12V8a4 4 0 0 1 8 0v4"/><path d="M12 12v9"/></svg></div>
+        <h3>Small Commissions</h3>
+        <p>Have a piece with meaning? Bring it in and we'll talk through a custom restoration or restyle made just for you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap reveal">
+    <h2>Old tables, new stories.</h2>
+    <p>Got a piece that deserves another chapter? Tell us about it — we'll help you decide whether to restore it, restyle it, or reimagine it entirely.</p>
+    <a href="#contact" class="btn btn-primary">Tell Us About Your Piece</a>
+  </div>
+</section>
+
+<!-- Gallery section · OWNER: swap each <img src> URL with your own photo when ready. Photos via Unsplash. -->
+<section class="gallery" style="padding:88px 0">
+  <div class="wrap">
+    <p style="font-size:11px;font-weight:600;letter-spacing:3.5px;text-transform:uppercase;opacity:.7;margin-bottom:14px">Gallery</p>
+    <h2 style="font-size:clamp(28px,4vw,46px);margin-bottom:32px;font-weight:500;line-height:1.12">Old tables. New stories.</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px">
+      <figure style="margin:0;aspect-ratio:4/5;overflow:hidden;border-radius:14px;background:rgba(0,0,0,.05)"><img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=900&q=80&auto=format&fit=crop" alt="Restored solid wood dining table" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform=''"></figure>
+      <figure style="margin:0;aspect-ratio:4/5;overflow:hidden;border-radius:14px;background:rgba(0,0,0,.05)"><img src="https://images.unsplash.com/photo-1493666438817-866a91353ca9?w=900&q=80&auto=format&fit=crop" alt="Vintage refinished wooden dining table styled with chairs" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform=''"></figure>
+      <figure style="margin:0;aspect-ratio:4/5;overflow:hidden;border-radius:14px;background:rgba(0,0,0,.05)"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=900&q=80&auto=format&fit=crop" alt="Antique wooden coffee table refinished for a living room" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform=''"></figure>
+    </div>
+    <p style="margin-top:14px;font-size:12.5px;opacity:.55">Photos via Unsplash — easy to swap with your own.</p>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-info reveal">
+      <div class="eyebrow">Get in Touch</div>
+      <h2 style="font-size:clamp(28px,4vw,44px);margin-bottom:18px">Let's give it new life.</h2>
+      <p>Now taking restoration projects and commissions in Auburn and the surrounding area. Send a note with a little about your piece and what you have in mind.</p>
+      <div class="contact-line"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Auburn, New York</div>
+      <!-- OWNER: add your phone and email below, then delete the "coming soon" notes -->
+      <div class="contact-line"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span class="soon">Phone — coming soon</span></div>
+      <div class="contact-line"><svg viewBox="0 0 24 24" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span class="soon">Email — coming soon</span></div>
+    </div>
+    <div class="reveal">
+      <!-- OWNER: connect this form to an email service (e.g. Formspree: action="https://formspree.io/f/XXXX" method="POST") to receive messages. -->
+      <form id="contactForm" onsubmit="return sendForm(event)">
+        <div class="field"><label for="n">Name</label><input id="n" name="name" required></div>
+        <div class="field"><label for="e">Email</label><input id="e" name="email" type="email" required></div>
+        <div class="field"><label for="m">Tell us about your piece</label><textarea id="m" name="message" rows="5" placeholder="What it is, its condition, restore or restyle…" required></textarea></div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+        <p class="form-note">We'll reply by email — usually within a day or two.</p>
+        <div id="formMsg">Thank you — your message is ready to send once the form is connected.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="logo">Turn <span>Tables</span></div>
+    <p>Furniture restoration &amp; refinishing studio · Auburn, NY</p>
+    <div class="socials">
+      <!-- OWNER: replace # with your Instagram / Facebook links -->
+      <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+      <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v6h4v-6h3l1-4h-4V8a1 1 0 0 1 1-1z"/></svg></a>
+    </div>
+    <p class="foot-fine">© <span id="yr"></span> Turn Tables · Cynthia Wilder. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const t=document.getElementById('toggle'),m=document.getElementById('menu');
+  t.addEventListener('click',()=>{m.classList.toggle('open');t.classList.toggle('open')});
+  m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.classList.remove('open');t.classList.remove('open')}));
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  function sendForm(ev){ev.preventDefault();document.getElementById('formMsg').style.display='block';return false;}
+</script>
+</body>
+</html>

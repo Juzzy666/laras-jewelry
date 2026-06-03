@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New Businesses of Central New York | Onondaga, Cayuga &amp; Madison Counties</title>
+<meta name="description" content="A directory of brand-new local businesses across Onondaga, Cayuga, and Madison Counties, NY — each with its own website. Support local, shop new.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --bg:#0f1117; --panel:#171a22; --card:#1d212b; --line:rgba(255,255,255,.08);
+    --ink:#f3f1ea; --muted:#9aa0ad; --accent:#e0a458; --accent-2:#5bb6a6;
+    --serif:'Fraunces',Georgia,serif; --sans:'Inter',system-ui,sans-serif;
+    --max:1180px; --ease:cubic-bezier(.25,.1,.25,1);
+  }
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 26px}
+  h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.1}
+
+  .hero{position:relative;padding:120px 0 80px;text-align:center;overflow:hidden;
+    background:radial-gradient(circle at 50% -10%,rgba(224,164,88,.18),transparent 55%),radial-gradient(circle at 85% 80%,rgba(91,182,166,.12),transparent 50%),var(--bg)}
+  .kicker{font-size:12px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--accent);margin-bottom:20px}
+  .hero h1{font-size:clamp(40px,7vw,78px);margin-bottom:22px;max-width:14ch;margin-inline:auto}
+  .hero h1 em{font-style:italic;color:var(--accent)}
+  .hero p{font-size:clamp(16px,2.2vw,19px);color:var(--muted);max-width:600px;margin:0 auto}
+  .stats{display:flex;gap:40px;justify-content:center;margin-top:42px;flex-wrap:wrap}
+  .stat .n{font-family:var(--serif);font-size:40px;color:var(--accent)}
+  .stat .l{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
+
+  .note{max-width:760px;margin:0 auto;padding:18px 24px;border:1px solid var(--line);border-radius:14px;background:var(--panel);color:var(--muted);font-size:14.5px;text-align:center}
+
+  section{padding:54px 0}
+  .county{display:flex;align-items:baseline;gap:16px;margin-bottom:8px;border-bottom:1px solid var(--line);padding-bottom:16px}
+  .county h2{font-size:clamp(26px,3.6vw,38px)}
+  .county .count{color:var(--muted);font-size:14px}
+  .town-label{font-size:12px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--accent-2);margin:34px 0 16px}
+
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .biz{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 24px;transition:.3s var(--ease);position:relative;overflow:hidden}
+  .biz::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent-2));transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+  .biz:hover{transform:translateY(-5px);border-color:rgba(224,164,88,.4);box-shadow:0 22px 44px rgba(0,0,0,.35)}
+  .biz:hover::before{transform:scaleX(1)}
+  .biz .cat{font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+  .biz h3{font-size:22px;margin-bottom:6px}
+  .biz .owner{font-size:14px;color:var(--muted);margin-bottom:18px}
+  .biz .go{margin-top:auto;display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14px;color:var(--ink)}
+  .biz .go svg{width:16px;height:16px;stroke:var(--accent);fill:none;stroke-width:2;transition:transform .3s}
+  .biz:hover .go svg{transform:translateX(4px)}
+  .biz .tag-verified{position:absolute;top:22px;right:22px;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--accent-2);border:1px solid rgba(91,182,166,.4);padding:3px 8px;border-radius:20px}
+
+  footer{border-top:1px solid var(--line);padding:46px 0;text-align:center;color:var(--muted);font-size:14px}
+  footer .heart{color:var(--accent)}
+
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:880px){.grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:600px){.grid{grid-template-columns:1fr}.stats{gap:28px}}
+</style>
+</head>
+<body>
+<section class="hero">
+  <div class="wrap reveal">
+    <div class="kicker">Onondaga · Cayuga · Madison Counties</div>
+    <h1>Central New York's <em>newest</em> businesses.</h1>
+    <p>A growing directory of brand-new, locally-owned ventures — freshly registered and ready to meet you. Each has its own website. Pick one and say hello.</p>
+    <div class="stats">
+      <div class="stat"><div class="n">25</div><div class="l">Businesses</div></div>
+      <div class="stat"><div class="n">3</div><div class="l">Counties</div></div>
+      <div class="stat"><div class="n">8</div><div class="l">Towns</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap" style="margin-bottom:10px">
+  <div class="note reveal">Most of these businesses are brand new, so some contact details are still being added by their owners. Sites with verified phone, email, or social links are marked <strong style="color:var(--accent-2)">Verified</strong>.</div>
+</div>
+
+<!-- ONONDAGA -->
+<section class="wrap">
+  <div class="county reveal"><h2>Onondaga County</h2><span class="count">19 businesses</span></div>
+
+  <div class="town-label reveal">Brewerton</div>
+  <div class="grid">
+    <a class="biz reveal" href="butter-and-bloom/"><div class="cat">Baked Goods &amp; Florals</div><h3>Butter &amp; Bloom</h3><div class="owner">Kalie Dingman</div><span class="go">Visit site <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+  </div>
+
+  <div class="town-label reveal">Camillus</div>
+  <div class="grid">
+    <a class="biz reveal" href="elevate-services/"><div class="cat">General Contracting</div><h3>Elevate Services</h3><div class="owner">John Hayward Gardner Jr.</div><span class="go">Visit site <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+  </div>
+
+  <div class="town-label reveal">Clay</div>
+  <div class="grid">
+    <a class="biz reveal" href="piles-be-gone/"><div class="cat">Dog Waste Removal</div><h3>Piles Be Gone</h3><div class="owner">Sebby Rocco Abbate</div><span class="go">Visit site <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+  </div>
+
+  <div class="town-label reveal">Jamesville</div>
+  <div class="grid">
+    <a class="biz reveal" href="desert-ghost-darin/"><span class="tag-verified">Verified</span><div class="cat">Fashion Brand</div><h3>Desert Ghost</h3><div class="owner">Michelle DaRin</div><span class="go">Visit site <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+  </div>
+
+  <div class="town-label reveal">Liverpool</div>
+  <div class="grid">
+    <a class="biz reveal" href="315-syracuse-singles/"><div class="cat">Sports Memorabilia</div><h3>315 Syracuse Singles</h3><div class="owner">Justin Miguel Rivera</div><span class="go">Visit site <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    <a class="biz reveal" href="ace-entertainment-cny/"><div class="cat">Photobooth &amp; Party Rental</div><h3>ACE Entertainment CNY</h3><div class="owner">Amy Lynn St. Hilaire</div><span class="go">Visit site <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    <a class="biz reveal" href="by-the-cup/"><div class="cat">Ice Cream</div><h3>By The Cup</h3><div class="owner">Jeffrey James Wilson</div><span class="go">Visit site <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+  </div>
+
+  <div class="town-label reveal">Syracuse</div>
+  <div class="grid">
+    <a class="biz reveal" href="art-that-heals-ministry/"><div class="cat">Ministry · Kids</div><h3>Art That Heals Ministry</h3><div class="owner">Alice Denise Young</div><span class="go">Visit site <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    <a class="biz reveal" href="av-shine-cleaning/"><div class="cat">Cleaning Services</div><h3>AV Shine Cleaning</h3><div class="owner">Alona Rusanova</div><span class="go">Visit site <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    <a class="biz reveal" href="dinner-table-by-jenna/"><div class="cat">Arts &amp; Crafts</div><h3>Dinner Table by Jenna</h3><div class="owner">Jenna Grace Law</div><span class="go">Visit site <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    <a class="biz reveal" href="epb-couriers/"><div class="cat">Courier &amp; Delivery</div><h3>EPB Couriers</h3><div class="owner">Eddie &amp; Porscha Brown</div><span class="go">Visit site <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    <a class="biz reveal" href="fire-and-ice-315/"><span class="tag-verified">Verified</span><div class="cat">Food Truck</div><h3>Fire &amp; Ice 315</h3><div class="owner">Rayshell Burke</div><span class="go">Visit site <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    <a class="biz reveal" href="holley-family-solutions/"><div class="cat">Consulting</div><h3>Holley Family Solutions</h3><div class="owner">Brian S. Holley</div><span class="go">Visit site <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    <a class="biz reveal" href="muse-the-beauty-society/"><div class="cat">Esthetics</div><h3>MUSE The Beauty Society</h3><div class="owner">Alexis M. Brown</div><span class="go">Visit site <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    <a class="biz reveal" href="phoenix-industrial-fabrication/"><div class="cat">Welding &amp; Fabrication</div><h3>Phoenix Industrial Fabrication</h3><div class="owner">Harold D. Cericola Jr.</div><span class="go">Visit site <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    <a class="biz reveal" href="prime-shine-mobile-services/"><div class="cat">Mobile Detailing</div><h3>Prime Shine Mobile Services</h3><div class="owner">Otis L. Tillie</div><span class="go">Visit site <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    <a class="biz reveal" href="the-steamy-bun/"><div class="cat">Restaurant</div><h3>The Steamy Bun</h3><div class="owner">Jacqueline &amp; Michael Parks</div><span class="go">Visit site <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    <a class="biz reveal" href="yaffy-taffy-art/"><div class="cat">Arts &amp; Crafts</div><h3>Yaffy Taffy Art</h3><div class="owner">Jessica Lee Yafchak</div><span class="go">Visit site <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    <a class="biz reveal" href="youth-care-crisis-worker/"><div class="cat">Youth Care</div><h3>Youth Care Crisis Worker</h3><div class="owner">Leartis Carswell Jr.</div><span class="go">Visit site <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+  </div>
+</section>
+
+<!-- CAYUGA -->
+<section class="wrap">
+  <div class="county reveal"><h2>Cayuga County</h2><span class="count">2 businesses</span></div>
+  <div class="town-label reveal">Auburn</div>
+  <div class="grid">
+    <a class="biz reveal" href="serenity-wellness/"><div class="cat">Wellness</div><h3>Serenity Wellness</h3><div class="owner">Robin Akeena-Gray</div><span class="go">Visit site <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    <a class="biz reveal" href="turn-tables/"><div class="cat">Furniture Restoration</div><h3>Turn Tables</h3><div class="owner">Cynthia Wilder</div><span class="go">Visit site <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+  </div>
+</section>
+
+<!-- MADISON -->
+<section class="wrap">
+  <div class="county reveal"><h2>Madison County</h2><span class="count">4 businesses</span></div>
+  <div class="town-label reveal">Canastota</div>
+  <div class="grid">
+    <a class="biz reveal" href="baxter-lawncare/"><div class="cat">Lawn Care</div><h3>Baxter Lawncare</h3><div class="owner">Kenneth E. Baxter</div><span class="go">Visit site <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    <a class="biz reveal" href="haus-of-diana-555/"><div class="cat">Retail Boutique</div><h3>Haus of Diana 555</h3><div class="owner">Roseanna Gherica Bates</div><span class="go">Visit site <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+  </div>
+  <div class="town-label reveal">Cazenovia</div>
+  <div class="grid">
+    <a class="biz reveal" href="stone-quarry-hydraulics/"><div class="cat">Hydraulics &amp; Manufacturing</div><h3>Stone Quarry Hydraulics</h3><div class="owner">Gary Robert Bushneck</div><span class="go">Visit site <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+  </div>
+  <div class="town-label reveal">Eaton</div>
+  <div class="grid">
+    <a class="biz reveal" href="s-and-s-materials/"><div class="cat">Agriculture &amp; Materials</div><h3>S&amp;S Materials</h3><div class="owner">Shawn &amp; Shana Payne</div><span class="go">Visit site <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Built for Central New York's newest small businesses <span class="heart">&#9733;</span> Support local.</div>
+</footer>
+
+<script>
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

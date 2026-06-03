@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Holley Family Solutions | Consulting for Families &amp; Small Business — Syracuse, NY</title>
+<meta name="description" content="Holley Family Solutions — practical consulting for individuals, families, and small businesses in Syracuse, NY. Clear guidance, real solutions, trusted support.">
+<!--
+  OWNER SETUP & NOTE:
+  • Owner: Brian Shamier Shaiquan Holley · Syracuse, NY · Category: consulting.
+  • A domain "holleyfamilysolutions.com" exists online but is framed as an IT/cybersecurity firm and its
+    ownership could NOT be confirmed as this filing. It was intentionally NOT linked here. If that domain is
+    yours, update the links/copy accordingly; if not, this site is independent of it.
+  • Add your phone, email, and social links where marked "coming soon" / href="#".
+  • Connect the contact form to an email service (Formspree/Netlify) to receive messages.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --navy:#14223a; --navy-2:#1d3050; --slate:#33445f; --gold:#c9a24b; --gold-d:#a9842f;
+    --bg:#f6f4ef; --cream:#fcfbf7; --ink:#1c2330; --muted:#6b7385;
+    --serif:'Cormorant Garamond',Georgia,serif; --sans:'Inter',system-ui,sans-serif;
+    --max:1140px; --ease:cubic-bezier(.25,.1,.25,1);
+  }
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.7;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 26px}
+  h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.12}
+  .label{font-size:12px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--gold-d);margin-bottom:15px}
+  .btn{display:inline-block;padding:14px 32px;border-radius:6px;font-weight:600;font-size:15px;transition:.35s var(--ease)}
+  .btn-gold{background:var(--gold);color:var(--navy);box-shadow:0 10px 24px rgba(201,162,75,.35)}
+  .btn-gold:hover{background:var(--gold-d);transform:translateY(-3px)}
+  .btn-line{border:1.5px solid currentColor}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(20,34,58,.96);backdrop-filter:blur(10px)}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:18px 26px;max-width:var(--max);margin:0 auto}
+  .logo{font-family:var(--serif);font-size:24px;font-weight:700;color:#fff}
+  .logo span{color:var(--gold)}
+  .nav-links{display:flex;gap:30px;align-items:center}
+  .nav-links a{font-weight:500;font-size:15px;color:rgba(255,255,255,.88)}
+  .nav-links a:hover{color:var(--gold)}
+  .nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer}
+  .nav-toggle span{width:26px;height:2px;background:#fff;transition:.3s}
+
+  .hero{position:relative;padding:130px 0 140px;color:#fff;overflow:hidden;
+    background:linear-gradient(125deg,var(--navy) 0%,var(--navy-2) 60%,var(--slate) 130%)}
+  .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 82% 24%,rgba(201,162,75,.22),transparent 42%)}
+  .hero-inner{position:relative;z-index:2;max-width:720px}
+  .hero .label{color:var(--gold)}
+  .hero h1{font-size:clamp(40px,6.5vw,76px);margin-bottom:22px}
+  .hero h1 em{font-style:italic;color:var(--gold)}
+  .hero p{font-size:clamp(17px,2.2vw,20px);max-width:540px;color:rgba(255,255,255,.82);margin-bottom:34px;font-weight:300}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero .btn-line{color:#fff}
+  .hero .btn-line:hover{background:#fff;color:var(--navy)}
+
+  section{padding:96px 0}
+  .about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+  .about h2{font-size:clamp(30px,4.5vw,48px);margin-bottom:20px}
+  .about p{color:var(--muted);margin-bottom:18px;font-size:17px}
+  .values{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:8px}
+  .value{background:var(--cream);border:1px solid rgba(28,35,48,.08);border-radius:12px;padding:22px}
+  .value h4{font-family:var(--sans);font-size:15px;font-weight:600;margin-bottom:6px;color:var(--navy)}
+  .value p{font-size:14px;color:var(--muted);margin:0}
+  .crest{aspect-ratio:1/1;border-radius:16px;background:linear-gradient(155deg,var(--navy),var(--slate));display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;padding:40px;box-shadow:0 30px 60px rgba(20,34,58,.28)}
+  .crest p{font-family:var(--serif);font-style:italic;font-size:clamp(24px,3.4vw,34px);line-height:1.3}
+  .crest p span{color:var(--gold)}
+
+  .services{background:var(--cream)}
+  .services .head{max-width:600px;margin:0 auto 54px;text-align:center}
+  .services h2{font-size:clamp(30px,4.5vw,46px);margin-bottom:12px}
+  .services .head p{color:var(--muted)}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .card{background:var(--bg);border:1px solid rgba(28,35,48,.08);border-radius:14px;padding:34px 28px;transition:.35s var(--ease)}
+  .card:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(20,34,58,.12);border-color:var(--gold)}
+  .card .ic{width:54px;height:54px;border-radius:12px;background:var(--navy);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+  .card .ic svg{width:28px;height:28px;stroke:var(--gold);fill:none;stroke-width:1.7}
+  .card h3{font-size:22px;margin-bottom:10px}
+  .card p{color:var(--muted);font-size:15px}
+
+  .band{background:linear-gradient(120deg,var(--navy),var(--navy-2));color:#fff;text-align:center}
+  .band h2{font-size:clamp(28px,4vw,42px);color:#fff;margin-bottom:14px}
+  .band p{max-width:560px;margin:0 auto 28px;opacity:.85}
+
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+  .contact h2{font-size:clamp(28px,4vw,44px);margin-bottom:18px}
+  .contact-info p{color:var(--muted);margin-bottom:22px;font-size:17px}
+  .cl{display:flex;gap:13px;align-items:center;margin-bottom:15px;font-weight:600}
+  .cl svg{width:21px;height:21px;stroke:var(--gold-d);fill:none;stroke-width:1.8;flex:none}
+  .cl .soon{color:var(--muted);font-weight:400;font-style:italic}
+  form{display:grid;gap:15px}
+  .field{display:grid;gap:6px}
+  .field label{font-weight:600;font-size:14px}
+  .field input,.field textarea{font-family:inherit;font-size:15px;padding:13px 16px;border:1.5px solid rgba(28,35,48,.18);border-radius:10px;background:var(--cream);color:var(--ink)}
+  .field input:focus,.field textarea:focus{outline:none;border-color:var(--gold)}
+  #formMsg{display:none;padding:13px 16px;background:rgba(201,162,75,.18);border-radius:10px;font-weight:600}
+
+  footer{background:var(--navy);color:rgba(255,255,255,.72);padding:54px 0 30px;text-align:center}
+  footer .logo{margin-bottom:14px}
+  .socials{display:flex;gap:16px;justify-content:center;margin:18px 0 24px}
+  .socials a{width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.28);display:flex;align-items:center;justify-content:center;transition:.3s}
+  .socials a:hover{background:var(--gold);border-color:var(--gold);color:var(--navy)}
+  .socials svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.7}
+  .fine{font-size:13px;opacity:.6;margin-top:10px}
+
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:860px){
+    .about-grid,.contact-grid{grid-template-columns:1fr;gap:42px}
+    .grid{grid-template-columns:1fr}
+    .values{grid-template-columns:1fr}
+    section{padding:66px 0}
+    .nav-links{position:fixed;inset:0 0 0 auto;width:80%;max-width:320px;background:var(--navy-2);flex-direction:column;justify-content:center;gap:28px;transform:translateX(100%);transition:transform .35s var(--ease)}
+    .nav-links.open{transform:none}
+    .nav-toggle{display:flex;z-index:60}
+    .nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .nav-toggle.open span:nth-child(2){opacity:0}
+    .nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  }
+</style>
+</head>
+<body>
+<header>
+  <nav>
+    <a href="#top" class="logo">Holley <span>Family Solutions</span></a>
+    <div class="nav-links" id="menu">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="btn btn-gold" style="padding:10px 22px">Free Consult</a>
+    </div>
+    <button class="nav-toggle" id="toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<a id="top"></a>
+<section class="hero">
+  <div class="wrap hero-inner reveal">
+    <div class="label">Syracuse, New York</div>
+    <h1>Real solutions,<br>built on <em>trust</em>.</h1>
+    <p>Practical consulting for individuals, families, and small businesses — clear guidance to help you make confident decisions and move forward.</p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn btn-gold">Book a Consultation</a>
+      <a href="#services" class="btn btn-line">What We Do</a>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="reveal">
+      <div class="label">About</div>
+      <h2>Guidance you can count on.</h2>
+      <p>Holley Family Solutions is a Syracuse-based consulting practice founded on a simple belief: good advice should be honest, approachable, and genuinely useful. We take the time to understand your situation before recommending a path forward.</p>
+      <p>Whether you're an individual planning a next step, a family organizing for the future, or a small business finding its footing, we're here to bring clarity and a steady hand.</p>
+      <div class="values">
+        <div class="value"><h4>Honest</h4><p>Straightforward advice, no jargon, no pressure.</p></div>
+        <div class="value"><h4>Personal</h4><p>Tailored to your goals, not a one-size template.</p></div>
+        <div class="value"><h4>Practical</h4><p>Plans you can actually act on.</p></div>
+        <div class="value"><h4>Local</h4><p>Rooted in the Syracuse community.</p></div>
+      </div>
+    </div>
+    <div class="crest reveal"><p>"Solutions that put your <span>family first</span>."</p></div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="label" style="display:inline-block">Services</div>
+      <h2>How we can help.</h2>
+      <p>Flexible consulting and advisory services shaped around what matters most to you.</p>
+    </div>
+    <div class="grid">
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></div>
+        <h3>Family &amp; Personal Planning</h3>
+        <p>Organize priorities and map out clear, achievable next steps for you and your household.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 13l4-4 4 3 7-7M21 8v5h-5"/><path d="M3 20h18"/></svg></div>
+        <h3>Small Business Advisory</h3>
+        <p>Guidance on operations, planning, and growth to help your business run smoother.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4"/><path d="M5 21c0-4 3-6 7-6s7 2 7 6"/></svg></div>
+        <h3>One-on-One Coaching</h3>
+        <p>Personalized support and accountability to help you reach your goals.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 9h8M8 13h8M8 17h5"/></svg></div>
+        <h3>Strategy &amp; Planning</h3>
+        <p>Turn big-picture goals into a focused, step-by-step plan of action.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>Problem Solving</h3>
+        <p>A clear-headed partner to help you work through challenges and decisions.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3>Ongoing Support</h3>
+        <p>Check-ins and continued guidance so you're never navigating alone.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap reveal">
+    <h2>Let's find the right path forward.</h2>
+    <p>Start with a no-obligation conversation about where you are and where you'd like to be.</p>
+    <a href="#contact" class="btn btn-gold">Schedule a Consultation</a>
+  </div>
+</section>
+
+<!-- Gallery section · OWNER: swap each <img src> URL with your own photo when ready. Photos via Unsplash. -->
+<section class="gallery" style="padding:88px 0">
+  <div class="wrap">
+    <p style="font-size:11px;font-weight:600;letter-spacing:3.5px;text-transform:uppercase;opacity:.7;margin-bottom:14px">Gallery</p>
+    <h2 style="font-size:clamp(28px,4vw,46px);margin-bottom:32px;font-weight:500;line-height:1.12">Built on trust, made for results.</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px">
+      <figure style="margin:0;aspect-ratio:4/5;overflow:hidden;border-radius:14px;background:rgba(0,0,0,.05)"><img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=900&q=80&auto=format&fit=crop" alt="Two professionals shaking hands across a meeting table." loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform=''"></figure>
+      <figure style="margin:0;aspect-ratio:4/5;overflow:hidden;border-radius:14px;background:rgba(0,0,0,.05)"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=80&auto=format&fit=crop" alt="A team meeting in a bright modern office." loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform=''"></figure>
+      <figure style="margin:0;aspect-ratio:4/5;overflow:hidden;border-radius:14px;background:rgba(0,0,0,.05)"><img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=900&q=80&auto=format&fit=crop" alt="A clean modern office desk with a laptop ready for work." loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform=''"></figure>
+    </div>
+    <p style="margin-top:14px;font-size:12.5px;opacity:.55">Photos via Unsplash — easy to swap with your own.</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-info reveal">
+      <div class="label">Contact</div>
+      <h2>Reach out today.</h2>
+      <p>Tell us a little about what you're working through, and we'll get back to you to set up a time to talk.</p>
+      <div class="cl"><svg viewBox="0 0 24 24"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Syracuse, New York</div>
+      <!-- OWNER: add phone and email below -->
+      <div class="cl"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span class="soon">Phone — coming soon</span></div>
+      <div class="cl"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span class="soon">Email — coming soon</span></div>
+    </div>
+    <div class="reveal">
+      <!-- OWNER: connect this form to an email service (Formspree/Netlify) to receive messages. -->
+      <form id="contactForm" onsubmit="return sendForm(event)">
+        <div class="field"><label for="n">Name</label><input id="n" name="name" required></div>
+        <div class="field"><label for="e">Email</label><input id="e" name="email" type="email" required></div>
+        <div class="field"><label for="m">How can we help?</label><textarea id="m" name="message" rows="5" placeholder="Briefly describe what you're looking for…" required></textarea></div>
+        <button type="submit" class="btn btn-gold">Send Message</button>
+        <div id="formMsg">Thank you — your message is ready to send once the form is connected.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="logo">Holley <span style="color:var(--gold)">Family Solutions</span></div>
+    <p>Consulting &amp; advisory · Syracuse, NY</p>
+    <div class="socials">
+      <!-- OWNER: add your LinkedIn / Facebook links -->
+      <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 10v7M7 7v.01M11 17v-4a2 2 0 0 1 4 0v4M11 13v4"/></svg></a>
+      <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v6h4v-6h3l1-4h-4V8a1 1 0 0 1 1-1z"/></svg></a>
+    </div>
+    <p class="fine">© <span id="yr"></span> Holley Family Solutions · Brian Holley. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const t=document.getElementById('toggle'),m=document.getElementById('menu');
+  t.addEventListener('click',()=>{m.classList.toggle('open');t.classList.toggle('open')});
+  m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.classList.remove('open');t.classList.remove('open')}));
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  function sendForm(ev){ev.preventDefault();document.getElementById('formMsg').style.display='block';return false;}
+</script>
+</body>
+</html>

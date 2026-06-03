@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prime Shine Mobile Services | Mobile Auto Detailing — Syracuse, NY</title>
+<meta name="description" content="Prime Shine Mobile Services by Otis L. Tillie — mobile auto detailing in Syracuse, New York. We come to you for exterior wash & wax, interior detail, full detail, headlight restoration, and ceramic-style protection.">
+<!--
+  OWNER SETUP — replace the placeholders below when your details are ready:
+  • Phone, email, and social links (search "OWNER:" in this file)
+  • Connect the contact form to an email service (Formspree, Netlify Forms, etc.) — see the <form> tag
+  Real facts used: business name, owner (Otis L. Tillie), town (Syracuse, NY), category (mobile auto detailing).
+  Everything else is illustrative copy you can edit freely.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --bg:#0e0e12; --panel:#16161d; --panel-2:#1c1c25; --blue:#2e7dff; --blue-dk:#1f5fd6;
+    --chrome:#c9ced6; --ink:#eef0f4; --muted:#9aa0ac; --line:rgba(255,255,255,.08);
+    --display:'Sora',system-ui,sans-serif; --sans:'Inter',system-ui,sans-serif;
+    --max:1160px; --ease:cubic-bezier(.22,.61,.36,1);
+  }
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.68;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.08;letter-spacing:-.02em;color:#fff}
+  .eyebrow{font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--blue);margin-bottom:14px}
+  .btn{display:inline-block;padding:14px 32px;font-family:var(--display);font-weight:600;font-size:15px;border-radius:8px;transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s}
+  .btn-primary{background:linear-gradient(135deg,var(--blue),var(--blue-dk));color:#fff;box-shadow:0 10px 30px rgba(46,125,255,.4)}
+  .btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 38px rgba(46,125,255,.55)}
+  .btn-ghost{border:1.5px solid rgba(201,206,214,.4);color:var(--chrome)}
+  .btn-ghost:hover{border-color:var(--blue);color:#fff;background:rgba(46,125,255,.1)}
+
+  /* header */
+  header{position:sticky;top:0;z-index:50;background:rgba(14,14,18,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:var(--max);margin:0 auto}
+  .logo{font-family:var(--display);font-size:20px;font-weight:800;color:#fff;display:flex;align-items:center;gap:9px;letter-spacing:-.01em}
+  .logo .mk{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,var(--blue),var(--blue-dk));display:flex;align-items:center;justify-content:center}
+  .logo .mk svg{width:18px;height:18px;stroke:#fff;fill:none}
+  .logo span{color:var(--blue)}
+  .nav-links{display:flex;gap:28px;align-items:center}
+  .nav-links a{font-weight:500;font-size:15px;color:var(--chrome);transition:color .25s}
+  .nav-links a:hover{color:#fff}
+  .nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer}
+  .nav-toggle span{width:26px;height:2px;background:#fff;transition:.3s}
+
+  /* hero */
+  .hero{position:relative;padding:120px 0 130px;overflow:hidden;background:radial-gradient(circle at 78% 28%,rgba(46,125,255,.32),transparent 52%),radial-gradient(circle at 12% 90%,rgba(46,125,255,.12),transparent 50%),var(--bg)}
+  .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,var(--blue),transparent)}
+  .hero-inner{position:relative;max-width:780px}
+  .hero .pill{display:inline-flex;align-items:center;gap:8px;background:rgba(46,125,255,.14);border:1px solid rgba(46,125,255,.4);color:var(--blue);font-weight:600;font-size:13px;padding:8px 16px;border-radius:30px;margin-bottom:22px}
+  .hero .pill svg{width:16px;height:16px;stroke:var(--blue);fill:none}
+  .hero h1{font-size:clamp(42px,7.5vw,82px);font-weight:800;margin:0 0 22px}
+  .hero h1 span{background:linear-gradient(135deg,#fff,var(--chrome));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero h1 em{font-style:normal;color:var(--blue)}
+  .hero p{font-size:clamp(17px,2.2vw,21px);color:var(--muted);max-width:560px;margin-bottom:34px}
+  .hero-cta{display:flex;gap:16px;flex-wrap:wrap}
+
+  section{padding:96px 0}
+  .section-head{max-width:640px;margin-bottom:54px}
+  .section-head h2{font-size:clamp(30px,4.5vw,48px);margin-bottom:14px}
+  .section-head p{color:var(--muted);font-size:17px}
+
+  /* about */
+  .about{background:var(--panel)}
+  .about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+  .about p{color:var(--muted);margin-bottom:18px;font-size:17px}
+  .about-card{position:relative;background:linear-gradient(150deg,var(--panel-2),#10101a);border:1px solid var(--line);border-radius:16px;aspect-ratio:4/3;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.5)}
+  .about-card::before{content:"";position:absolute;top:-40%;left:-20%;width:140%;height:60%;background:linear-gradient(120deg,transparent,rgba(255,255,255,.06),transparent);transform:rotate(-8deg)}
+  .about-card svg{width:62px;height:62px;stroke:var(--blue);fill:none;margin-bottom:16px}
+  .about-card .big{font-family:var(--display);font-size:clamp(22px,3.5vw,28px);font-weight:700;color:#fff}
+  .about-card .sub{color:var(--muted);font-size:15px;margin-top:8px}
+
+  /* packages */
+  .packages{background:var(--bg)}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:34px 28px;transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s}
+  .card:hover{transform:translateY(-6px);border-color:rgba(46,125,255,.5);box-shadow:0 24px 50px rgba(0,0,0,.5)}
+  .card .ic{width:54px;height:54px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:rgba(46,125,255,.14);margin-bottom:20px}
+  .card .ic svg{width:28px;height:28px;stroke:var(--blue);fill:none}
+  .card h3{font-size:21px;margin-bottom:10px}
+  .card p{color:var(--muted);font-size:15.5px}
+
+  /* come-to-you band */
+  .band{background:linear-gradient(135deg,var(--blue),var(--blue-dk));color:#fff;text-align:center;position:relative;overflow:hidden}
+  .band::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,rgba(255,255,255,.06) 0 2px,transparent 2px 24px)}
+  .band .wrap{position:relative}
+  .band h2{font-size:clamp(28px,4vw,46px);margin-bottom:16px;color:#fff}
+  .band > .wrap > p{max-width:580px;margin:0 auto 30px;font-size:17px;opacity:.94}
+  .band .btn-primary{background:#fff;color:var(--blue-dk);box-shadow:0 10px 24px rgba(0,0,0,.25)}
+  .band .btn-primary:hover{box-shadow:0 16px 34px rgba(0,0,0,.35)}
+
+  /* contact */
+  .contact{background:var(--panel)}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+  .contact-info p{color:var(--muted);margin-bottom:22px;font-size:17px}
+  .contact-line{display:flex;gap:14px;align-items:center;margin-bottom:16px;font-weight:600;color:#fff}
+  .contact-line svg{width:22px;height:22px;stroke:var(--blue);fill:none;flex:none}
+  .contact-line .soon{color:var(--muted);font-weight:400;font-style:italic}
+  form{display:grid;gap:16px}
+  .field{display:grid;gap:6px}
+  .field label{font-weight:700;font-size:14px;color:var(--chrome)}
+  .field input,.field textarea{font-family:inherit;font-size:15px;padding:13px 16px;border:1.5px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}
+  .field input:focus,.field textarea:focus{outline:none;border-color:var(--blue)}
+  .form-note{font-size:13px;color:var(--muted)}
+  #formMsg{display:none;padding:13px 16px;background:rgba(46,125,255,.16);border-radius:8px;color:#fff;font-weight:600}
+
+  /* footer */
+  footer{background:#08080b;color:var(--muted);padding:54px 0 30px;text-align:center;border-top:1px solid var(--line)}
+  footer .logo{color:#fff;justify-content:center;margin-bottom:14px}
+  .socials{display:flex;gap:16px;justify-content:center;margin:18px 0 26px}
+  .socials a{width:42px;height:42px;border-radius:8px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;transition:.25s}
+  .socials a:hover{background:var(--blue);border-color:var(--blue);color:#fff}
+  .socials svg{width:18px;height:18px;stroke:currentColor;fill:none}
+  .foot-fine{font-size:13px;opacity:.7;margin-top:10px}
+
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:860px){
+    .about-grid,.contact-grid{grid-template-columns:1fr;gap:40px}
+    .cards{grid-template-columns:1fr}
+    .nav-links{position:fixed;inset:0 0 0 auto;width:78%;max-width:320px;background:var(--panel);flex-direction:column;justify-content:center;gap:28px;transform:translateX(100%);transition:transform .35s var(--ease);box-shadow:-10px 0 40px rgba(0,0,0,.6)}
+    .nav-links.open{transform:none}
+    .nav-toggle{display:flex;z-index:60}
+    .nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .nav-toggle.open span:nth-child(2){opacity:0}
+    .nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    section{padding:64px 0}
+  }
+</style>
+</head>
+<body>
+<header>
+  <nav>
+    <a href="#top" class="logo"><span class="mk"><svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13l2-5h14l2 5"/><path d="M3 13h18v4H3z"/><circle cx="7" cy="17" r="1.5"/><circle cx="17" cy="17" r="1.5"/></svg></span>Prime <span>Shine</span></a>
+    <div class="nav-links" id="menu">
+      <a href="#about">About</a>
+      <a href="#packages">Packages</a>
+      <a href="#mobile">We Come To You</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="btn btn-primary" style="padding:10px 22px">Book Now</a>
+    </div>
+    <button class="nav-toggle" id="toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<a id="top"></a>
+<section class="hero">
+  <div class="wrap hero-inner reveal">
+    <div class="pill"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Syracuse, NY · We come to you</div>
+    <h1><span>Showroom shine,</span><br><em>right in your driveway.</em></h1>
+    <p>Prime Shine Mobile Services brings professional auto detailing to your home or workplace. Owner Otis L. Tillie and his fully mobile setup mean you never have to leave — we handle the shine while you carry on with your day.</p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn btn-primary">Book a Detail</a>
+      <a href="#packages" class="btn btn-ghost">View Packages</a>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="reveal">
+      <div class="eyebrow">About Prime Shine</div>
+      <h2>Detailing built around you.</h2>
+      <p>Prime Shine Mobile Services is a Syracuse-based mobile detailing business owned by Otis L. Tillie. The whole idea is convenience without compromise: pro-level results delivered wherever your vehicle is parked.</p>
+      <p>We treat every car, truck, and SUV like it's our own — careful products, the right technique, and an obsessive eye for the finish. Whether it's a quick refresh or a full transformation, we bring the gear and the polish to you.</p>
+    </div>
+    <div class="about-card reveal">
+      <svg viewBox="0 0 24 24" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 6.5L21 11l-6.6 2.5L12 20l-2.4-6.5L3 11l6.6-2.5z"/></svg>
+      <div class="big">Fully mobile. Fully detailed.</div>
+      <div class="sub">We bring water, power, and the polish to your location.</div>
+    </div>
+  </div>
+</section>
+
+<section class="packages" id="packages">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Our Packages</div>
+      <h2>Pick your level of shine.</h2>
+      <p>From a fast exterior refresh to a full inside-out transformation — all done at your location.</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13l2-5h14l2 5"/><path d="M3 13h18v4H3z"/><path d="M8 4c0 1.5-2 2-2 4M16 4c0 1.5-2 2-2 4"/></svg></div>
+        <h3>Exterior Wash &amp; Wax</h3>
+        <p>A thorough hand wash, wheels and tires, and a protective wax that leaves the paint slick and glossy.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 18v2M17 18v2M7 10h4M7 13h2"/></svg></div>
+        <h3>Interior Detail</h3>
+        <p>Deep vacuum, wipe-down of all surfaces, glass, and floor mats — a clean, fresh cabin from dash to trunk.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 6.5L21 11l-6.6 2.5L12 20l-2.4-6.5L3 11l6.6-2.5z"/></svg></div>
+        <h3>Full Detail</h3>
+        <p>Our complete inside-and-out service — everything from the wash and wax to a full interior reset in one visit.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="12" rx="9" ry="5"/><path d="M12 7v10M7 9l10 6M7 15l10-6"/></svg></div>
+        <h3>Headlight Restoration</h3>
+        <p>Cloudy, yellowed headlights polished back to clear — better looks and better visibility on the road.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>Ceramic-Style Protection</h3>
+        <p>A durable protective coating that adds depth, repels water, and helps keep your finish cleaner for longer.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h10"/><circle cx="19" cy="17" r="2"/></svg></div>
+        <h3>Custom Add-Ons</h3>
+        <p>Pet hair removal, odor treatment, engine bay tidy-up, and more — tailor any package to your vehicle's needs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="mobile">
+  <div class="wrap reveal">
+    <h2>You park it. We perfect it.</h2>
+    <p>Home, office, or apartment lot — we bring the full mobile detailing setup to your location across the Syracuse area. No drop-off, no waiting room, no hassle.</p>
+    <a href="#contact" class="btn btn-primary">Schedule Your Detail</a>
+  </div>
+</section>
+
+<!-- Gallery section · OWNER: swap each <img src> URL with your own photo when ready. Photos via Unsplash. -->
+<section class="gallery" style="padding:88px 0">
+  <div class="wrap">
+    <p style="font-size:11px;font-weight:600;letter-spacing:3.5px;text-transform:uppercase;opacity:.7;margin-bottom:14px">Gallery</p>
+    <h2 style="font-size:clamp(28px,4vw,46px);margin-bottom:32px;font-weight:500;line-height:1.12">Showroom shine — at your driveway.</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px">
+      <figure style="margin:0;aspect-ratio:4/5;overflow:hidden;border-radius:14px;background:rgba(0,0,0,.05)"><img src="https://images.unsplash.com/photo-1601362840469-51e4d8d59085?w=900&q=80&auto=format&fit=crop" alt="A car being hand-detailed for that high-gloss shine." loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform=''"></figure>
+      <figure style="margin:0;aspect-ratio:4/5;overflow:hidden;border-radius:14px;background:rgba(0,0,0,.05)"><img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=900&q=80&auto=format&fit=crop" alt="A polished black car looking showroom-fresh." loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform=''"></figure>
+      <figure style="margin:0;aspect-ratio:4/5;overflow:hidden;border-radius:14px;background:rgba(0,0,0,.05)"><img src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?w=900&q=80&auto=format&fit=crop" alt="A spotless car interior after a fresh detail." loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform=''"></figure>
+    </div>
+    <p style="margin-top:14px;font-size:12.5px;opacity:.55">Photos via Unsplash — easy to swap with your own.</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-info reveal">
+      <div class="eyebrow">Get in Touch</div>
+      <h2 style="font-size:clamp(28px,4vw,46px);margin-bottom:18px">Ready to ride clean?</h2>
+      <p>Now booking mobile details across Syracuse and the surrounding area. Send your vehicle details and location, and we'll set you up.</p>
+      <div class="contact-line"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Syracuse, New York</div>
+      <!-- OWNER: add your phone and email below, then delete the "coming soon" notes -->
+      <div class="contact-line"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span class="soon">Phone — coming soon</span></div>
+      <div class="contact-line"><svg viewBox="0 0 24 24" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span class="soon">Email — coming soon</span></div>
+    </div>
+    <div class="reveal">
+      <!-- OWNER: connect this form to an email service (e.g. Formspree: action="https://formspree.io/f/XXXX" method="POST") to receive messages. -->
+      <form id="contactForm" onsubmit="return sendForm(event)">
+        <div class="field"><label for="n">Name</label><input id="n" name="name" required></div>
+        <div class="field"><label for="e">Email</label><input id="e" name="email" type="email" required></div>
+        <div class="field"><label for="m">Vehicle &amp; what you need</label><textarea id="m" name="message" rows="5" placeholder="Vehicle, package, your location…" required></textarea></div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+        <p class="form-note">We'll reply to set up your mobile appointment.</p>
+        <div id="formMsg">Thanks! Your message is ready to send once the form is connected.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="logo"><span class="mk"><svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13l2-5h14l2 5"/><path d="M3 13h18v4H3z"/><circle cx="7" cy="17" r="1.5"/><circle cx="17" cy="17" r="1.5"/></svg></span>Prime <span>Shine</span></div>
+    <p>Mobile auto detailing · Syracuse, NY</p>
+    <div class="socials">
+      <!-- OWNER: replace # with your Instagram / Facebook links -->
+      <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+      <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v6h4v-6h3l1-4h-4V8a1 1 0 0 1 1-1z"/></svg></a>
+    </div>
+    <p class="foot-fine">© <span id="yr"></span> Prime Shine Mobile Services · Otis L. Tillie. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const t=document.getElementById('toggle'),m=document.getElementById('menu');
+  t.addEventListener('click',()=>{m.classList.toggle('open');t.classList.toggle('open')});
+  m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.classList.remove('open');t.classList.remove('open')}));
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  function sendForm(ev){ev.preventDefault();document.getElementById('formMsg').style.display='block';return false;}
+</script>
+</body>
+</html>
